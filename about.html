@@ -4,7 +4,7 @@
     <title>Pet Sitting - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,31 +20,39 @@
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
     <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/adventure/bootstrap.css">
   </head>
   <body>
 
-		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	    	<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>Pet sitting</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="fa fa-bars"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	        	<li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="vet.html" class="nav-link">Veterinarian</a></li>
-	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-	          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
+			<!-- start banner Area -->
+			<section class="banner-area" id="home">
+				<!-- Start Header Area -->
+				<header class="default-header">
+					<nav class="navbar navbar-expand-lg  navbar-light">
+						<div class="container">
+							  <a class="navbar-brand" href="index.html" style="color: #fff">
+							  	<strong>Activities4All</strong>
+							  </a>
+							  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							    <span class="text-white lnr lnr-menu"></span>
+							  </button>
+
+							  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+							    <ul class="navbar-nav">
+									<li><a href="#home">INÍCIO</a></li>
+									<li><a href="about.html">SOBRE NÓS</a></li>									
+									<li><a href="#secvice">ATIVIDADES</a></li>
+									<li><a href="#gallery">BLOG</a></li>
+									<li><a href="#faq">CONTACTOS</a></li>
+									<li><a href="#contact">ENTRAR</a></li>
+							    </ul>
+							  </div>						
+						</div>
+					</nav>
+				</header>
+				<!-- End Header Area -->				
+			</section>
   
 	<section class="hero-wrap hero-wrap-2" style="background-image: url('images/Sobre-nos.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
@@ -59,13 +67,30 @@
     </section>
 
 	<!-- Sobre nos -->
-	<div class="container">
-        <div class="row justify-content-center pb-5 mb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h2>Convívio Emoção e Diversão! </h2>
-          </div>
-        </div>
-	</div>
+			<!-- Start about Area -->
+			<section class="section-gap info-area" id="about">
+				<div class="container relative">					
+					<h2 class="mb-10 text-center colorGreen">Convívio Emoção e Diversão!</h2>
+					<div class="single-info row mt-40">
+						<div class="col-lg-6 col-md-10 no-padding info-left">
+							<div class="info-content">
+								<h2 class="pb-30 text-center">Sobre Nós</h2>
+								<p>
+									<span class="f700 colorGreen">Activities4All</span> é responsável pela coordenação de atividades em grupo de DESPORTOS RADICAIS ajudá-mos a gerir as suas reservas de atividades, os participantes e o material no terreno.
+								</p>
+								<p class="text-center"><a href="/about.html" class="text-uppercase sobreNos-btn">Ver Mais</a></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 no-padding text-start info-right">
+							<div class="info-thumb">
+								<img src="images/sobreNos.jpeg" class="img-fluid ml-50" alt="">
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End about Area -->
 
 	<!-- Indicadores -->
     <section class="ftco-counter" id="section-counter">
@@ -203,63 +228,48 @@
     </section>
 
 	<!-- Feedbacks-->
-    <section class="ftco-section testimony-section" style="background-color: #F2F4F6;">
-    	<div class="overlay"></div>
-      <div class="container">
-        <div class="row justify-content-center pb-5 mb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h2>TESTEMUNHOS &amp; FEEDBACKS</h2>
-			      <P> UM LUGAR ONDE A AVENTURA NUNCA TEM FIM</P>
+  <section class="section-gap feedback-bg">
+    <div class="container">
+      <div class="title text-center mb-50">
+        <h1>Testemunhos &amp; Feedbacks</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="feedback-aspas">
+            <span class="fa fa-quote-left colorGreen"></span>
+          </div> 
+          <div class="feedback-col-bg">
+            <p class="mb-4">Muito bom! Sinonimo de passar umas horas bastante agradáveis. O circuito dos adultos é feito por 4 trilhos, com o grau de dificuldade a ir aumentando. No entanto pela experiência, de passar todos os níveis, ultrapassar todos os obstáculos, e no final de cada trilho fazer um slide, vale muito a pena.</p>
+              <div class="d-flex text-center">
+                <p>Ana Rodrigues</p>
+              </div>
           </div>
         </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-                  <div class="text">
-                    <p class="mb-4">Muito bom! Sinonimo de passar umas horas bastante agradáveis. O circuito dos adultos é feito por 4 trilhos, com o grau de dificuldade a ir aumentando. No entanto pela experiência, de passar todos os níveis, ultrapassar todos os obstáculos, e no final de cada trilho fazer um slide, vale muito a pena.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="pl-3">
-		                    <p class="name">Ana Rodrigues</p>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
+        <div class="col-sm">
+          <div class="feedback-aspas">
+            <span class="fa fa-quote-left colorGreen"></span>
+          </div> 
+          <div class="feedback-col-bg">
+            <p class="mb-4">Um excelente local de diversão no meio da natureza, tanto para crianças como para adultos.</p>
+              <div class="d-flex text-center">
+                <p>Paulo Rodrigues</p>
               </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-                  <div class="text">
-                    <p class="mb-4">Um excelente local de diversão no meio da natureza, tanto para crianças como para adultos.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="pl-3">
-		                    <p class="name">Paulo Rodrigues</p>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="feedback-aspas">
+            <span class="fa fa-quote-left colorGreen"></span>
+          </div> 
+          <div class="feedback-col-bg">
+            <p class="mb-4">Amazing experience, worth every penny.</p>
+              <div class="d-flex text-center">
+                <p>Roger Scott</p>
               </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-                  <div class="text">
-                    <p class="mb-4">Amazing experience, worth every penny.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
 	 <!-- Footer -->
     <footer class="footer">
@@ -337,7 +347,8 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-
+  <script src="js/adventure/js/main.js"></script>
+  <script src="js/adventure/js/jquery.sticky.js"></script>
     
   </body>
 </html>
