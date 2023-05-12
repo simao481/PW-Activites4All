@@ -1623,8 +1623,41 @@ button.bg-light:focus {
     margin-bottom: 0;
     color: inherit;
     background-color: rgba(0, 0, 0, 0.03);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-    .card-header:first-child {
-      border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
-    .card-header + .list-group .list-group-item:first-child {
-      border-top: 0; }
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.card-header+.list-group .list-group-item:first-child {
+    border-top: 0;
+}
+
+.icon-contacts {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    background-color: #005400;
+    border-radius: 100%;
+    color: #fff;
+    margin: auto;
+}
+
+.card-contacts{
+    box-shadow: -35.355px 35.355px 50px 0px rgba(157, 157, 157, 0.3);
+    background-color: #fff;
+    padding: 50px;
+}
+
+.img-contacts{
+    box-shadow: -35.355px 35.355px 50px 0px rgba(157, 157, 157, 0.3);
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
