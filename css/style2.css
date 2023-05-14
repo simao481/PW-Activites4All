@@ -1661,3 +1661,34 @@ button.bg-light:focus {
     height: 400px;
     width: 100%;
 }
+
+.atividades-card{
+    height: 283px;
+    width: 240px;
+}
+
+.texto-card-titulo{
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.texto-card-corpo{
+    font-size: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.comprar{
+    border-radius: 15px;
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+    width: 100px;
+}
+
+.comprar:hover{
+    background-color: #005400;
+    color:#fff;
+    transition: 0.2s ease-in-out;
+    border: #005400;
+}
