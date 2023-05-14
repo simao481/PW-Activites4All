@@ -1698,8 +1698,13 @@ button.bg-light:focus {
     transition: transform 500ms ease;
 }
 
+.atividades-card{
+    transition: transform 500ms ease;
+}
+
 .atividades-card:hover{
     overflow: visible;
+    transform: scale(1.05);
 }
 
 .atividades-card:hover .card-corpo{
@@ -1708,12 +1713,52 @@ button.bg-light:focus {
 }
 
 .card-container{
+    position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 60%;
+    gap: 10%;
+    margin-bottom: 20%;
+}
+
+.card-container2{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 10%;
+    margin-bottom: 20%;
 }
 
 .card{
     border: transparent;
     
 }
+
+.pagination .page-link {
+    border-color: #005400;
+    color: #005400;
+}
+
+.page-item.active .page-link {
+    background-color: #005400;
+    border-color: #005400;
+  }
+
+.btn-secondary{
+    background-color: #fff;
+    color:#000;
+    width: 20%;
+}
+
+.btn-secondary:hover{
+    background-color: #005400;
+    color:#fff;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle, .btn-secondary:focus {
+    color: #fff;
+    background-color: #005400;
+    border-color: #005400;
+    box-shadow: none;
+}
+

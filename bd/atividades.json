@@ -46,5 +46,149 @@
             "tempo": "2h",
             "categoria": "Terra",
             "icon": "fas fa-running"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre1",
+            "preco": "12.99",
+            "imagem": "agua",
+            "tempo": "2h",
+            "categoria": "Água",
+            "icon": "fas fa-water"
           }
     ]
