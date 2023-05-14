@@ -1665,6 +1665,7 @@ button.bg-light:focus {
 .atividades-card{
     height: 283px;
     width: 240px;
+    overflow: hidden;
 }
 
 .texto-card-titulo{
@@ -1682,13 +1683,37 @@ button.bg-light:focus {
     border-radius: 15px;
     background: transparent;
     color: #fff;
-    border-color: #fff;
     width: 100px;
+    border-color: #fff;
 }
 
 .comprar:hover{
     background-color: #005400;
+    border-color: #005400;
     color:#fff;
-    transition: 0.2s ease-in-out;
-    border: #005400;
+}
+
+.card-corpo{
+    transform: translateY(60%);
+    transition: transform 500ms ease;
+}
+
+.atividades-card:hover{
+    overflow: visible;
+}
+
+.atividades-card:hover .card-corpo{
+    transform: translateY(0);
+    backdrop-filter: blur(3px);
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 60%;
+}
+
+.card{
+    border: transparent;
+    
 }
