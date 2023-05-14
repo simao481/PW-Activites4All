@@ -108,12 +108,37 @@ const renderPagination = (cardData, page) => {
 const postMethods = async () => {
   const cardData = await getCardData();
   if (cardData) {
-    renderPosts(cardData, currentPage);
-    renderPagination(cardData, currentPage);
+    renderPosts(cardData, 1);
+    renderPagination(cardData, 1);
   }
 };
 
+const postMethodsFilter = async (categoria) => {
+    if(categoria === "Todos"){
+        postMethods();
+    }else{
+        const cardData = await getCardData();
+        if (cardData) {
+        const filteredData = cardData.filter(post => post.categoria === categoria);
+        renderPosts(filteredData, 1);
+        renderPagination(filteredData, 1);
+        }
+    }
+  };
+
 postMethods();
+
+//--------------------------Dropbox Filtro--------------------
+
+const dropdownButton = document.querySelector(".dropdown-toggle");
+const dropdownItems = document.querySelectorAll(".dropdown-item");
+
+dropdownItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    dropdownButton.textContent = item.textContent;
+    postMethodsFilter(item.textContent);
+  });
+});
 
 //---------------------------------------------------Destaques--------------------------------------------------
 
@@ -165,15 +190,3 @@ const postMethods2 = async () => {
 };
 
 postMethods2();
-
-//--------------------------Dropbox Filtro--------------------
-
-const dropdownButton = document.querySelector(".dropdown-toggle");
-const dropdownItems = document.querySelectorAll(".dropdown-item");
-
-dropdownItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    dropdownButton.textContent = item.textContent;
-  });
-});
-
