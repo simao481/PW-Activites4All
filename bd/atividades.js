@@ -196,7 +196,7 @@ const categoriaSelecionada = localStorage.getItem('categoriaSelecionada');
 if (categoriaSelecionada) {
     postMethodsFilter(categoriaSelecionada);
     dropdownButton.textContent = categoriaSelecionada;
-    localStorage.clear;
+}else{
+    dropdownButton.textContent = 'Todos';
+    postMethods();
 }
-postMethodsFilter('Todos');
-dropdownButton.textContent = 'Todos';
