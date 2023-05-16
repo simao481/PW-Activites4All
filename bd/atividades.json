@@ -190,5 +190,13 @@
             "tempo": "2h",
             "categoria": "Água",
             "icon": "fas fa-water"
+          },
+          {
+            "titulo": "Nado Livre2",
+            "preco": "12.99",
+            "imagem": "terra",
+            "tempo": "2h",
+            "categoria": "Terra",
+            "icon": "fas fa-water"
           }
     ]

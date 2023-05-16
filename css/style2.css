@@ -1694,7 +1694,7 @@ button.bg-light:focus {
 }
 
 .card-corpo{
-    transform: translateY(60%);
+    transform: translateY(55%);
     transition: transform 500ms ease;
 }
 
@@ -1716,22 +1716,12 @@ button.bg-light:focus {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10%;
-    margin-bottom: 20%;
-}
-
-.card-container2{
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 10%;
+    gap: 5%;
     margin-bottom: 20%;
 }
 
 .card{
-    border: transparent;
-    
+    border: transparent;  
 }
 
 .pagination .page-link {

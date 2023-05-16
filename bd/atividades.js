@@ -1,23 +1,51 @@
-const postContainer = document.querySelector(".card-container");
+const postContainer = document.querySelector("#atividades");
 const paginationContainer = document.querySelector(".pagination-container");
+const dropdownButton = document.querySelector(".dropdown-toggle");
 const POSTS_PER_PAGE = 12;
 let currentPage = 1;
 
-const getCardData = async () => {
-    try {
-        const response = await fetch('/bd/atividades.json');
-        const cardData = await response.json();
-        return cardData;
-    } catch (error) {
-        console.error(error);
-    }
-};
+/*fetch('/bd/atividades.json')
+    .then(response => response.json())
+    .then(data => {
+        localStorage.setItem('atividades', JSON.stringify(data));
+        console.log('Atividades armazenados no LocalStorage');
+    })
+    .catch(error => {
+        console.error('Erro ao buscar o JSON:', error);
+    });
+
+fetch('/bd/destaques.json')
+    .then(response => response.json())
+    .then(data => {
+        localStorage.setItem('destaques', JSON.stringify(data));
+        console.log('Destaques armazenados no LocalStorage');
+    })
+    .catch(error => {
+        console.error('Erro ao buscar o JSON:', error);
+    });
+*/
+
+
+let dados1 = {
+    "id": "26",
+    "titulo": "Nado Livre4",
+    "preco": "12.99",
+    "imagem": "agua",
+    "tempo": "2h",
+    "categoria": "Terra",
+    "icon": "fas fa-water"
+}
+
+const lista = JSON.parse(localStorage.getItem('atividades')) || [];
+lista.push(dados1);
+localStorage.setItem('atividades', JSON.stringify(lista));
+console.log(lista);
 
 const createCardElement = (postData) => {
     const postElement = document.createElement("div");
-    postElement.classList.add("card");
+    postElement.classList.add("card1");
     postElement.innerHTML = `
-    <div class="card atividades-card justify-content-end"
+    <div class="card card1 atividades-card justify-content-end" id ="${postData.id}"
             style="background: url(images/${postData.imagem}.jpeg); background-size: cover;">
             <div class="card-corpo">
                 <h3 class="text-white texto-card-titulo" style="font-size: 150%;">${postData.titulo}</h3>
@@ -38,6 +66,22 @@ const createCardElement = (postData) => {
     return postElement;
 };
 
+const addCardClickListener = () => {
+    const classCard = document.querySelectorAll('.card1');
+
+    classCard.forEach((card) => {
+        card.addEventListener('click', () => {
+            const cardID = card.id;
+            if(cardID){
+                localStorage.setItem('atividadeSelecionada', JSON.stringify(cardID));
+                window.location.href = `AtividadeInfo.html`;
+            }
+                
+        });
+    });
+    
+};
+
 const renderPosts = (cardData, page) => {
     const start = (page - 1) * POSTS_PER_PAGE;
     const end = start + POSTS_PER_PAGE;
@@ -47,6 +91,7 @@ const renderPosts = (cardData, page) => {
         const postElement = createCardElement(postData);
         postContainer.appendChild(postElement);
     });
+    addCardClickListener();
 };
 
 const renderPagination = (cardData, page) => {
@@ -105,85 +150,77 @@ const renderPagination = (cardData, page) => {
     });
 };
 
-const postMethods = async () => {
-    const cardData = await getCardData();
-    if (cardData) {
-        renderPosts(cardData, 1);
-        renderPagination(cardData, 1);
-    }
-};
-
-const postMethodsFilter = async (categoria) => {
+const postMethodsFilter = (categoria) => {
     if (categoria === "Todos") {
         postMethods();
     } else {
-        const cardData = await getCardData();
-        if (cardData) {
-            const filteredData = cardData.filter(post => post.categoria === categoria);
+        const atividades = JSON.parse(localStorage.getItem('atividades'));
+        if (atividades) {
+            console.log(atividades);
+            const filteredData = atividades.filter(post => post.categoria === categoria);
             renderPosts(filteredData, 1);
             renderPagination(filteredData, 1);
         }
     }
 };
 
-postMethods();
+const postMethods = () => {
+    const atividades = JSON.parse(localStorage.getItem('atividades'));
+    if (atividades) {
+        console.log(atividades);
+        renderPosts(atividades, 1);
+        renderPagination(atividades, 1);
+
+        const dropdownItems = document.querySelectorAll(".dropdown-item");
+
+        dropdownItems.forEach((item) => {
+            item.addEventListener("click", () => {
+                dropdownButton.textContent = item.textContent;
+                postMethodsFilter(item.textContent);
+            });
+        });
+    }
+};
+
 
 //--------------------------Dropbox Filtro--------------------
 
-const dropdownButton = document.querySelector(".dropdown-toggle");
-const dropdownItems = document.querySelectorAll(".dropdown-item");
 
-dropdownItems.forEach((item) => {
-    item.addEventListener("click", () => {
-        dropdownButton.textContent = item.textContent;
-        postMethodsFilter(item.textContent);
-    });
-});
 
 //---------------------------------------------------Destaques--------------------------------------------------
 
-const postContainer2 = document.querySelector(".card-container2");
-
-const getCardData2 = async () => {
-    try {
-        const response = await fetch('/bd/destaques.json');
-        const cardData2 = await response.json();
-        return cardData2;
-    } catch (error) {
-        console.error(error);
-    }
-};
+const postContainer2 = document.querySelector("#destaques");
 
 const createCardElement2 = (postData2) => {
     const postElement2 = document.createElement("div");
     postElement2.classList.add("card2");
     postElement2.innerHTML = `
-    <div class="card2 atividades-card justify-content-end"
+    <div class="card card2 atividades-card justify-content-end"
             style="background: url(images/${postData2.imagem}.jpeg); background-size: cover;">
             <div class="card-corpo">
-                <h3 class="text-white texto-card-titulo">${postData2.titulo}</h3>
-                <p class="text-white texto-card-corpo">
-                    <i class='${postData2.icon}' style='color: white'></i> ${postData2.categoria} <i class="fa fa-clock-o" aria-hidden="true"></i> ${postData2.tempo}
-                </p>
-                <div class="row">
-                    <div class="col-sm">
-                        <p class="text-white texto-card-corpo">Desde<br><span class="preco">${postData2.preco}</span>€ / Pessoa</p>
-                    </div>
-                    <div class="col-sm">
-                        <button type="button" class="btn btn-primary comprar">Comprar</button>
-                    </div>
+            <h3 class="text-white texto-card-titulo" style="font-size: 150%;">${postData2.titulo}</h3>
+            <p class="text-white texto-card-corpo" style="font-size: 110%;">
+                <i class='${postData2.icon}' style='color: white'></i> ${postData2.categoria} <i class="fa fa-clock-o" aria-hidden="true"></i> ${postData2.tempo}
+            </p>
+            <div class="row">
+                <div class="col-sm" style="padding-right:0%;">
+                    <p class="text-white texto-card-corpo" style="font-size: 95%;">Desde<br><span class="preco">${postData2.preco}</span>€ / Pessoa</p>
+                </div>
+                <div class="col-sm">
+                    <button type="button" class="btn btn-primary comprar">Comprar</button>
                 </div>
             </div>
         </div>
+    </div>
     `;
     return postElement2;
 };
 
 const postMethods2 = async () => {
-    const cardData2 = await getCardData2();
-    if (cardData2) {
-        cardData2.forEach((postData2) => {
-            const postElement2 = createCardElement(postData2);
+    const destaques = JSON.parse(localStorage.getItem("destaques"));
+    if (destaques) {
+        destaques.forEach((postData2) => {
+            const postElement2 = createCardElement2(postData2);
             postContainer2.appendChild(postElement2);
         });
     }
@@ -191,12 +228,14 @@ const postMethods2 = async () => {
 
 postMethods2();
 
-const dropdown = document.querySelector('.dropdown-item');
+
 const categoriaSelecionada = localStorage.getItem('categoriaSelecionada');
 if (categoriaSelecionada) {
     postMethodsFilter(categoriaSelecionada);
     dropdownButton.textContent = categoriaSelecionada;
-}else{
+    localStorage.removeItem("categoriaSelecionada");
+} else {
     dropdownButton.textContent = 'Todos';
     postMethods();
 }
+
