@@ -1,0 +1,119 @@
+#atividade-requisitos{
+    background-color: #D6F3D1;
+    padding-top: 1%;
+}
+
+.icons{
+    font-size: 50px;
+    color: #000;
+    text-align: end;
+}
+
+.texto{
+    color:#000;
+    font-size: 17px;
+}
+
+.card-info{
+    width: 100%;
+    height: 100%;
+    padding: 2% 5% 5% 5%;
+    box-shadow: 0px 0px 50px 0px rgba(157, 157, 157, 0.3);
+}
+
+.rating{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.rating input{
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.rating input::after{
+    content: '\f005';
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 30px;
+    color: #e6e6e6;
+    transition: 0.5s;
+}
+
+.rating input:hover ~ input::after,
+.rating input:hover::after,
+.rating input:checked ~ input::after,
+.rating input:checked::after{
+    color: var(--c);
+}
+
+.estrelas{
+    padding: 6% 8% 0% 0%;
+}
+
+.titulo-card{
+    padding: 4% 1% 1% 8%;
+}
+
+.escolha{
+    font-size: 20px;
+    color: #000;
+    padding-top: 10%;
+}
+
+.escolha input{
+    width: 20px;
+    height: 20px;
+    accent-color: #005400;
+    cursor: pointer;
+}
+
+.escolha input:checked{
+    background-color: #005400;
+}
+
+.cartao-carrinho{
+    padding: 3% 5% 5% 20%;
+}
+
+.escolha-botao{
+    display: flex;
+    width: 100%;
+}
+
+#preco{
+    padding-left: 10%;
+}
+
+hr {
+    border: none; /* remove a borda padrão */
+    height: 0.5px; /* define a altura da linha */
+    background-color: #bfbfbf; /* define a cor da linha */
+    width: 90%;
+    padding-right: 1%;
+  }
+
+.adicionarCarrinho, .adicionarCarrinho:hover, .adicionarCarrinho:focus{
+    width: 100%;
+    background-color: #005400;
+    border-color: #005400;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.comprar1, .comprar1:hover, .comprar1:focus{
+    width: 100%;
+    background-color: transparent;
+    border-color: #005400;
+    box-shadow: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color:#005400
+}
+
+#opcoes{
+    width: 100%;
+}

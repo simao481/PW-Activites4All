@@ -33,7 +33,22 @@ let dados1 = {
     "imagem": "agua",
     "tempo": "2h",
     "categoria": "Terra",
-    "icon": "fas fa-water"
+    "icon": "fas fa-water",
+    "descricao": "Uma descrição qualquer!!!",
+    "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+    "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+    "dificuldade": "3",
+    "localizacao": "1",
+    "pacotes":[{"nomePacote": "Ganda Pacote",
+                "preco": "15.99"},
+                {"nomePacote": "Ganda Pacote",
+                "preco": "15.99"},
+                {"nomePacote": "Ganda Pacote",
+                "preco": "15.99"},
+                {"nomePacote": "Ganda Pacote",
+                "preco": "15.99"},
+                {"nomePacote": "Ganda Pacote",
+                "preco": "15.99"}]
 }
 
 const lista = JSON.parse(localStorage.getItem('atividades')) || [];

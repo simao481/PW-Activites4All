@@ -6,7 +6,14 @@ let atividades = [
         "imagem": "ar",
         "tempo": "2h",
         "categoria": "Ar",
-        "icon": "fas fa-wind"
+        "icon": "fas fa-wind",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"}]
     },
     {
         "id": "2",
@@ -15,7 +22,16 @@ let atividades = [
         "imagem": "terra",
         "tempo": "2h",
         "categoria": "Terra",
-        "icon": "fas fa-running"
+        "icon": "fas fa-running",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "3",
@@ -24,7 +40,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "4",
@@ -33,7 +58,16 @@ let atividades = [
         "imagem": "ar",
         "tempo": "2h",
         "categoria": "Ar",
-        "icon": "fas fa-wind"
+        "icon": "fas fa-wind",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "5",
@@ -42,7 +76,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "6",
@@ -51,7 +94,16 @@ let atividades = [
         "imagem": "terra",
         "tempo": "2h",
         "categoria": "Terra",
-        "icon": "fas fa-running"
+        "icon": "fas fa-running",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "7",
@@ -60,7 +112,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "8",
@@ -69,7 +130,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "9",
@@ -78,7 +148,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "10",
@@ -87,7 +166,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "11",
@@ -96,7 +184,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "12",
@@ -105,7 +202,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "13",
@@ -114,7 +220,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "14",
@@ -123,7 +238,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "15",
@@ -132,7 +256,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "16",
@@ -141,7 +274,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "17",
@@ -150,7 +292,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "18",
@@ -159,7 +310,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "19",
@@ -168,7 +328,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "20",
@@ -177,7 +346,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "21",
@@ -186,7 +364,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "22",
@@ -195,7 +382,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "23",
@@ -204,7 +400,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "24",
@@ -213,7 +418,16 @@ let atividades = [
         "imagem": "agua",
         "tempo": "2h",
         "categoria": "Água",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Uma descrição qualquer!!!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                    "preco": "14,99"}]
     },
     {
         "id": "25",
@@ -222,7 +436,16 @@ let atividades = [
         "imagem": "terra",
         "tempo": "2h",
         "categoria": "Terra",
-        "icon": "fas fa-water"
+        "icon": "fas fa-water",
+        "descricao": "Nadar ao ar livre é das melhores sensações possiveis!",
+        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "dificuldade": "3",
+        "localizacao": "1",
+        "pacotes":[{"nomePacote": "Ganda Pacote",
+                    "preco": "15.99"},
+                    {"nomePacote": "Ganda Pacote",
+                     "preco": "14,99"}]
     }
 ]
 
