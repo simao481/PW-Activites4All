@@ -13,7 +13,8 @@ let atividades = [
         "dificuldade": "3",
         "localizacao": "1",
         "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"}]
+                    "preco": "15.99"}],
+        "requisitos":[{"alturaMin": "150"}]
     },
     {
         "id": "2",
