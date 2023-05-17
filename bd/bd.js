@@ -669,7 +669,7 @@ let atividades = [
     },
     {
         "id": "22",
-        "titulo": "Nado Livre",
+        "titulo": "nado",
         "preco": "12.99",
         "imagem": "agua",
         "tempo": "2h",
@@ -697,7 +697,7 @@ let atividades = [
             "altura": "1.50",
             "tempo": "120"
         },
-        "avaliacao": "3"
+        "avaliacao": "0"
     },
     {
         "id": "23",
@@ -729,7 +729,7 @@ let atividades = [
             "altura": "1.50",
             "tempo": "120"
         },
-        "avaliacao": "3"
+        "avaliacao": "2"
     },
     {
         "id": "24",
@@ -761,7 +761,7 @@ let atividades = [
             "altura": "1.50",
             "tempo": "120"
         },
-        "avaliacao": "3"
+        "avaliacao": "1"
     },
     {
         "id": "25",
@@ -798,3 +798,40 @@ let atividades = [
 ]
 
 localStorage.setItem('atividades', JSON.stringify(atividades));
+
+const destaques = [
+    {
+      "titulo": "Paraquedismo1",
+      "preco": "13.99",
+      "imagem": "ar",
+      "tempo": "2h",
+      "categoria": "Ar",
+      "icon": "fas fa-wind"
+    },
+    {
+      "titulo": "Trails1",
+      "preco": "12.99",
+      "imagem": "terra",
+      "tempo": "2h",
+      "categoria": "Terra",
+      "icon": "fas fa-running"
+    },
+    {
+      "titulo": "Canoagem1",
+      "preco": "12.99",
+      "imagem": "agua",
+      "tempo": "2h",
+      "categoria": "Água",
+      "icon": "fas fa-water"
+    },
+    {
+      "titulo": "Asa Delta1",
+      "preco": "12.99",
+      "imagem": "ar",
+      "tempo": "2h",
+      "categoria": "Ar",
+      "icon": "fas fa-wind"
+    }
+  ]
+
+  localStorage.setItem('destaques', JSON.stringify(destaques));

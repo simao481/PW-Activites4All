@@ -43,8 +43,6 @@
     transition: 0.5s;
 }
 
-.rating input:hover ~ input::after,
-.rating input:hover::after,
 .rating input:checked ~ input::after,
 .rating input:checked::after{
     color: var(--c);
@@ -53,6 +51,7 @@
 .estrelas{
     padding: 6% 8% 0% 0%;
 }
+
 
 .titulo-card{
     padding: 4% 1% 1% 8%;

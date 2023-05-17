@@ -73,7 +73,7 @@ if (id) {
         </div>
         <div class="w-100"></div>`;
         opcoes.innerHTML += novoCodigo;
-            }
+            }});
         participantes.innerHTML = postData.requisitos.participantes;
         idadeMin.innerHTML = postData.requisitos.idadeMin;
         idadeMax.innerHTML = postData.requisitos.idadeMax;
@@ -82,7 +82,7 @@ if (id) {
         altura.innerHTML = postData.requisitos.altura;
         tempo.innerHTML = postData.requisitos.tempo;
         let estrelas = 5 - postData.avaliacao;
-        for(let i = 0; i < estrelas; i++)
+        for(let i = 0; i < 5; i++){
             if(i === estrelas){
                 const novo = `<input type="radio" name="clr1" style="--c:#005400;" disabled checked>`;
                 avaliacao.innerHTML += novo;
@@ -90,12 +90,8 @@ if (id) {
                 const novo = `<input type="radio" name="clr1" style="--c:#005400;" disabled>`;
                 avaliacao.innerHTML += novo;
             }
-                
+        }  
         });
-            
-            
-
-    });
 } else {
 
 }
@@ -140,14 +136,3 @@ const postMethods2 = async () => {
 };
 
 postMethods2();
-
-
-const categoriaSelecionada = localStorage.getItem('categoriaSelecionada');
-if (categoriaSelecionada) {
-    postMethodsFilter(categoriaSelecionada);
-    dropdownButton.textContent = categoriaSelecionada;
-    localStorage.removeItem("categoriaSelecionada");
-} else {
-    dropdownButton.textContent = 'Todos';
-    postMethods();
-}
