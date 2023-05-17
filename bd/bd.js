@@ -8,13 +8,24 @@ let atividades = [
         "categoria": "Ar",
         "icon": "fas fa-wind",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"}],
-        "requisitos":[{"alturaMin": "150"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "2",
@@ -25,14 +36,28 @@ let atividades = [
         "categoria": "Terra",
         "icon": "fas fa-running",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "3",
@@ -43,14 +68,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "4",
@@ -61,14 +100,28 @@ let atividades = [
         "categoria": "Ar",
         "icon": "fas fa-wind",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "5",
@@ -79,14 +132,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "6",
@@ -97,14 +164,28 @@ let atividades = [
         "categoria": "Terra",
         "icon": "fas fa-running",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "7",
@@ -115,14 +196,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "8",
@@ -133,14 +228,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "9",
@@ -151,14 +260,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "10",
@@ -169,14 +292,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "11",
@@ -187,14 +324,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "12",
@@ -205,14 +356,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "13",
@@ -223,14 +388,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "14",
@@ -241,14 +420,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "15",
@@ -259,14 +452,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "16",
@@ -277,14 +484,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "17",
@@ -295,14 +516,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "18",
@@ -313,14 +548,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "19",
@@ -331,14 +580,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "20",
@@ -349,14 +612,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "21",
@@ -367,14 +644,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "22",
@@ -385,14 +676,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "23",
@@ -403,14 +708,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "24",
@@ -421,14 +740,28 @@ let atividades = [
         "categoria": "Água",
         "icon": "fas fa-water",
         "descricao": "Uma descrição qualquer!!!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                    "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "3"
     },
     {
         "id": "25",
@@ -439,14 +772,28 @@ let atividades = [
         "categoria": "Terra",
         "icon": "fas fa-water",
         "descricao": "Nadar ao ar livre é das melhores sensações possiveis!",
-        "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-        "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+        "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+        "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
         "dificuldade": "3",
         "localizacao": "1",
-        "pacotes":[{"nomePacote": "Ganda Pacote",
-                    "preco": "15.99"},
-                    {"nomePacote": "Ganda Pacote",
-                     "preco": "14,99"}]
+        "pacotes": [{
+            "nomePacote": "Ganda Pacote",
+            "preco": "15.99"
+        },
+        {
+            "nomePacote": "Ganda Pacote",
+            "preco": "14,99"
+        }],
+        "requisitos": {
+            "participantes": "1",
+            "idadeMin": "12",
+            "idadeMax": "65",
+            "pesoMin": "40",
+            "pesoMax": "100",
+            "altura": "1.50",
+            "tempo": "120"
+        },
+        "avaliacao": "5"
     }
 ]
 

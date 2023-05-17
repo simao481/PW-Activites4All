@@ -8,6 +8,14 @@ const dificuldade = document.getElementById('dificuldade');
 const localizacao = document.getElementById('localizacao');
 const cardTitulo = document.getElementById('card-titulo');
 const opcoes = document.getElementById('opcoes');
+const participantes = document.getElementById('participantes');
+const idadeMin = document.getElementById('idadeMin');
+const idadeMax = document.getElementById('idadeMax');
+const pesoMin = document.getElementById('pesoMin');
+const pesoMax = document.getElementById('pesoMax');
+const altura = document.getElementById('altura');
+const tempo = document.getElementById('tempo');
+const avaliacao = document.getElementById('avaliacao');
 
 const atividades = JSON.parse(localStorage.getItem('atividades'));
 if (id) {
@@ -66,6 +74,23 @@ if (id) {
         <div class="w-100"></div>`;
         opcoes.innerHTML += novoCodigo;
             }
+        participantes.innerHTML = postData.requisitos.participantes;
+        idadeMin.innerHTML = postData.requisitos.idadeMin;
+        idadeMax.innerHTML = postData.requisitos.idadeMax;
+        pesoMin.innerHTML = postData.requisitos.pesoMin;
+        pesoMax.innerHTML = postData.requisitos.pesoMax;
+        altura.innerHTML = postData.requisitos.altura;
+        tempo.innerHTML = postData.requisitos.tempo;
+        let estrelas = 5 - postData.avaliacao;
+        for(let i = 0; i < estrelas; i++)
+            if(i === estrelas){
+                const novo = `<input type="radio" name="clr1" style="--c:#005400;" disabled checked>`;
+                avaliacao.innerHTML += novo;
+            }else{
+                const novo = `<input type="radio" name="clr1" style="--c:#005400;" disabled>`;
+                avaliacao.innerHTML += novo;
+            }
+                
         });
             
             

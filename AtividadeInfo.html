@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-sm">
                         <h4>Participantes</h4>
-                        <p>1(Min.)</p>
+                        <p><span id="participantes"></span>(Min.)</p>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     </div>
                     <div class="col-sm">
                         <h4>Idade</h4>
-                        <p>6-99 Anos</p>
+                        <p><span id="idadeMin"></span>-<span id="idadeMax"></span> Anos</p>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="col-sm">
                         <h4>Peso</h4>
-                        <p>30-120kg</p>
+                        <p><span id="pesoMin"></span>kg-<span id="pesoMax"></span>kg</p>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                     </div>
                     <div class="col-sm">
                         <h4>Altura</h4>
-                        <p>1.30 m(Min.)</p>
+                        <p><span id="altura"></span> m(Min.)</p>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@
                     </div>
                     <div class="col-sm p-0">
                         <h4>Tempo</h4>
-                        <p>5 minutos</p>
+                        <p><span id="tempo"></span> minutos</p>
                     </div>
                 </div>
             </div>
@@ -148,12 +148,8 @@
                             <h1 id="card-titulo"></h1>
                         </div>
                         <div class="col-sm estrelas">
-                            <div class="rating">
-                                <input type="radio" name="clr1" style="--c:#005400;" disabled checked>
-                                <input type="radio" name="clr1" style="--c:#005400;" disabled>
-                                <input type="radio" name="clr1" style="--c:#005400;" disabled>
-                                <input type="radio" name="clr1" style="--c:#005400;" disabled>
-                                <input type="radio" name="clr1" style="--c:#005400;" disabled>
+                            <div class="rating" id="avaliacao">
+                                
                             </div>
                         </div>
                     </div>

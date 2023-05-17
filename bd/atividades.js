@@ -35,20 +35,40 @@ let dados1 = {
     "categoria": "Terra",
     "icon": "fas fa-water",
     "descricao": "Uma descrição qualquer!!!",
-    "materialNecessario":["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-    "materialIncluido":["Capacete", "Luvas", "Corda", "Arnês"],
+    "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
+    "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
     "dificuldade": "3",
     "localizacao": "1",
-    "pacotes":[{"nomePacote": "Ganda Pacote",
-                "preco": "15.99"},
-                {"nomePacote": "Ganda Pacote",
-                "preco": "15.99"},
-                {"nomePacote": "Ganda Pacote",
-                "preco": "15.99"},
-                {"nomePacote": "Ganda Pacote",
-                "preco": "15.99"},
-                {"nomePacote": "Ganda Pacote",
-                "preco": "15.99"}]
+    "pacotes": [{
+        "nomePacote": "Ganda Pacote",
+        "preco": "15.99"
+    },
+    {
+        "nomePacote": "Ganda Pacote",
+        "preco": "15.99"
+    },
+    {
+        "nomePacote": "Ganda Pacote",
+        "preco": "15.99"
+    },
+    {
+        "nomePacote": "Ganda Pacote",
+        "preco": "15.99"
+    },
+    {
+        "nomePacote": "Ganda Pacote",
+        "preco": "15.99"
+    }],
+    "requisitos": {
+        "participantes": "1",
+        "idadeMin": "12",
+        "idadeMax": "65",
+        "pesoMin": "40",
+        "pesoMax": "100",
+        "altura": "1.50",
+        "tempo": "120"
+    },
+    "avaliacao": "4"
 }
 
 const lista = JSON.parse(localStorage.getItem('atividades')) || [];
@@ -87,14 +107,14 @@ const addCardClickListener = () => {
     classCard.forEach((card) => {
         card.addEventListener('click', () => {
             const cardID = card.id;
-            if(cardID){
+            if (cardID) {
                 localStorage.setItem('atividadeSelecionada', JSON.stringify(cardID));
                 window.location.href = `AtividadeInfo.html`;
             }
-                
+
         });
     });
-    
+
 };
 
 const renderPosts = (cardData, page) => {
