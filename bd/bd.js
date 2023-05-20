@@ -786,7 +786,7 @@ let atividades = [
         }],
         "requisitos": {
             "participantes": "1",
-            "idadeMin": "12",
+            "idadeMin": "11",
             "idadeMax": "65",
             "pesoMin": "40",
             "pesoMax": "100",
