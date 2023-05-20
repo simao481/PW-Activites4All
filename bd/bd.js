@@ -801,37 +801,17 @@ localStorage.setItem('atividades', JSON.stringify(atividades));
 
 const destaques = [
     {
-      "titulo": "Paraquedismo1",
-      "preco": "13.99",
-      "imagem": "ar",
-      "tempo": "2h",
-      "categoria": "Ar",
-      "icon": "fas fa-wind"
+        "id": "1"
     },
     {
-      "titulo": "Trails1",
-      "preco": "12.99",
-      "imagem": "terra",
-      "tempo": "2h",
-      "categoria": "Terra",
-      "icon": "fas fa-running"
+        "id": "6"
     },
     {
-      "titulo": "Canoagem1",
-      "preco": "12.99",
-      "imagem": "agua",
-      "tempo": "2h",
-      "categoria": "Água",
-      "icon": "fas fa-water"
+        "id": "26"
     },
     {
-      "titulo": "Asa Delta1",
-      "preco": "12.99",
-      "imagem": "ar",
-      "tempo": "2h",
-      "categoria": "Ar",
-      "icon": "fas fa-wind"
+        "id": "20"
     }
-  ]
+]
 
-  localStorage.setItem('destaques', JSON.stringify(destaques));
+localStorage.setItem('destaques', JSON.stringify(destaques));

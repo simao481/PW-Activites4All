@@ -100,20 +100,37 @@ if (id) {
 
 const postContainer2 = document.querySelector("#destaques");
 
-const createCardElement2 = (postData2) => {
+const addCardClickListener = () => {
+    const classCard = document.querySelectorAll('.card2');
+    console.log(classCard);
+    classCard.forEach((card) => {
+        card.addEventListener('click', () => {
+            const cardID = card.id;
+            if (cardID) {
+                localStorage.setItem('atividadeSelecionada', JSON.stringify(cardID));
+                window.location.href = `AtividadeInfo.html`;
+            }
+
+        });
+    });
+
+};
+
+function createCardElement2(filteredData) {
+    console.log(filteredData);
     const postElement2 = document.createElement("div");
     postElement2.classList.add("card2");
     postElement2.innerHTML = `
-    <div class="card card2 atividades-card justify-content-end"
-            style="background: url(images/${postData2.imagem}.jpeg); background-size: cover;">
+    <div class="card card2 atividades-card justify-content-end" id ="${filteredData[0].id}"
+            style="background: url(images/${filteredData[0].imagem}.jpeg); background-size: cover;">
             <div class="card-corpo">
-            <h3 class="text-white texto-card-titulo" style="font-size: 150%;">${postData2.titulo}</h3>
+            <h3 class="text-white texto-card-titulo" style="font-size: 150%;">${filteredData[0].titulo}</h3>
             <p class="text-white texto-card-corpo" style="font-size: 110%;">
-                <i class='${postData2.icon}' style='color: white'></i> ${postData2.categoria} <i class="fa fa-clock-o" aria-hidden="true"></i> ${postData2.tempo}
+                <i class='${filteredData[0].icon}' style='color: white'></i> ${filteredData[0].categoria} <i class="fa fa-clock-o" aria-hidden="true"></i> ${filteredData[0].tempo}
             </p>
             <div class="row">
                 <div class="col-sm" style="padding-right:0%;">
-                    <p class="text-white texto-card-corpo" style="font-size: 95%;">Desde<br><span class="preco">${postData2.preco}</span>€ / Pessoa</p>
+                    <p class="text-white texto-card-corpo" style="font-size: 95%;">Desde<br><span class="preco">${filteredData[0].preco}</span>€ / Pessoa</p>
                 </div>
                 <div class="col-sm">
                     <button type="button" class="btn btn-primary comprar">Comprar</button>
@@ -123,15 +140,18 @@ const createCardElement2 = (postData2) => {
     </div>
     `;
     return postElement2;
-};
+}
 
-const postMethods2 = async () => {
+const postMethods2 = () => {
     const destaques = JSON.parse(localStorage.getItem("destaques"));
+    const atv = JSON.parse(localStorage.getItem("atividades"));
     if (destaques) {
         destaques.forEach((postData2) => {
-            const postElement2 = createCardElement2(postData2);
+            const filteredData = atv.filter(post => post.id === postData2.id);
+            const postElement2 = createCardElement2(filteredData);
             postContainer2.appendChild(postElement2);
         });
+        addCardClickListener();
     }
 };
 
