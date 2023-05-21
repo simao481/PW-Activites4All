@@ -815,3 +815,12 @@ const destaques = [
 ]
 
 localStorage.setItem('destaques', JSON.stringify(destaques));
+
+const users = [{
+    "user": "simao",
+    "password": "1234"
+},
+{"user": "simao1",
+"password": "1234"}]
+
+localStorage.setItem('utilizadores', JSON.stringify(users));

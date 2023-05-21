@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css"
+        integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -50,7 +53,7 @@
                             <li><a href="about.html">SOBRE NÓS</a></li>
                             <li><a href="atividades.html">ATIVIDADES</a></li>
                             <li><a href="contact.html">CONTACTOS</a></li>
-                            <li><a href="#">ENTRAR</a></li>
+                            <li><a class="text-white" id="nav-entrar">ENTRAR</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,114 +62,121 @@
         <!-- End Header Area -->
     </section>
 
-    <section class="default-banner">
-        <div class="item-slider relative" style="background: url(images/atividades.jpg);background-size: cover;">
-            <div class="overlay" style="background: rgba(0,0,0,.5)"></div>
-            <div class="container">
-                <div class="row fullscreen justify-content-center align-items-center">
-                    <div class="col-md-10 col-12">
-                        <div class="banner-content text-center">
-                            <h1 class="text-uppercase text-white">Personaliza a tua Aventura</h1>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="categoria-dropdown"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Todos
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="categoria-dropdown">
-                                    <a class="dropdown-item" href="#" data-categoria="all">Todos</a>
-                                    <a class="dropdown-item" href="#" data-categoria="ar">Ar</a>
-                                    <a class="dropdown-item" href="#" data-categoria="agua">Água</a>
-                                    <a class="dropdown-item" href="#" data-categoria="terra">Terra</a>
-                                </div>
-                            </div>
+    <div id="carrinho1">
 
+    </div>
+    </div>
+    <div id="corpoTodo">
+        <section class="default-banner">
+            <div class="item-slider relative" style="background: url(images/atividades.jpg);background-size: cover;">
+                <div class="overlay" style="background: rgba(0,0,0,.5)"></div>
+                <div class="container">
+                    <div class="row fullscreen justify-content-center align-items-center">
+                        <div class="col-md-10 col-12">
+                            <div class="banner-content text-center">
+                                <h1 class="text-uppercase text-white">Personaliza a tua Aventura</h1>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="categoria-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Todos
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="categoria-dropdown">
+                                        <a class="dropdown-item" href="#" data-categoria="all">Todos</a>
+                                        <a class="dropdown-item" href="#" data-categoria="ar">Ar</a>
+                                        <a class="dropdown-item" href="#" data-categoria="agua">Água</a>
+                                        <a class="dropdown-item" href="#" data-categoria="terra">Terra</a>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="" style="padding-left: 2%;background-color: #b2b2b240; padding: 1% 5% 1% 5%; height: 550px;">
+        <section class="" style="padding-left: 2%;background-color: #b2b2b240; padding: 1% 5% 1% 5%; height: 550px;">
+            <div class="container relative">
+                <h1 class="text-center" style="margin-bottom: 7%; margin-top: 1%;">Em Destaque</h1>
+                <div class="card-container" id="destaques"></div>
+            </div>
+        </section>
+
+        <section class="section-gap" id="atividades-section" style="padding-left: 2%; padding-top: 0%;"></section>
         <div class="container relative">
-            <h1 class="text-center" style="margin-bottom: 7%; margin-top: 1%;">Em Destaque</h1>
-            <div class="row card-container" id="destaques"></div>
+            <h1 class="text-center" style="margin-bottom: 10%; margin-top: 5%;">Que começe a <strong
+                    style="color:#005400;font-size: 70px;">Diversão</strong></h1>
+            <div class="row card-container" id="atividades"></div>
         </div>
+        <div class="container relative">
+            <div class="row justify-content-center pagination-container mb-50">
+            </div>
         </div>
-    </section>
+        </section>
 
-    <section class="section-gap" id="atividades-section"style="padding-left: 2%; padding-top: 0%;"></section>
-    <div class="container relative" >
-        <h1 class="text-center" style="margin-bottom: 10%; margin-top: 5%;">Que começe a <strong
-                style="color:#005400;font-size: 70px;">Diversão</strong></h1>
-        <div class="row card-container" id="atividades"></div>
-    </div>
-    <div class="container relative">
-        <div class="row justify-content-center pagination-container mb-50">
-        </div>
-    </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                    <h2 class="footer-heading">ACTIVITIES4ALL</h2>
-                    <p>Activities4All é responsável pela coordenação de atividades em grupo de DESPORTOS RADICAIS
-                        ajudá-mos a gerir as suas reservas de atividades, os participantes e o material no terreno.</p>
-                    <ul class="ftco-footer-social p-0">
-                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
-                                title="Twitter"><span class="fa fa-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
-                                title="Facebook"><span class="fa fa-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
-                                title="Instagram"><span class="fa fa-instagram"></span></a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-6 col-lg-2 pl-lg-5 mb-4 mb-md-0">
-                    <h2 class="footer-heading">LINKS</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">Início</a></li>
-                        <li><a href="#" class="py-2 d-block">Sobre Nós</a></li>
-                        <li><a href="#" class="py-2 d-block">Atividades</a></li>
-                        <li><a href="#" class="py-2 d-block">Blog</a></li>
-                        <li><a href="#" class="py-2 d-block">Contactos</a></li>
-
-                    </ul>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mt-58 mb-md-0">
-                    <ul class="list-unstyled">
-                        <li></li>
-                        <li><a href="#" class="py-2 d-block">Termos e condições gerais</a></li>
-                        <li><a href="#" class="py-2 d-block">Termos e condições de reservas</a></li>
-                        <li><a href="#" class="py-2 d-block">Política de Privacidade</a></li>
-                        <li><a href="#" class="py-2 d-block">Política de utilização de cookies</a></li>
-                    </ul>
-                </div>
-
-
-                <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-                    <h2 class="footer-heading">CONTACTOS</h2>
-                    <div class="block-23 mb-3">
-                        <ul>
-                            <li><span class="icon fa fa-map"></span><span class="text">Rua do Escorregadouro, Póvoa de
-                                    Lanhoso, Braga</span></li>
-                            <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">(+325) 253 657
-                                        984</span></a></li>
-                            <li><a href="#"><span class="icon fa fa-paper-plane"></span><span
-                                        class="text">info@activities4all.com</span></a></li>
-                            <li><a href="#"><span class="icon fa fa-globe"></span><span
-                                        class="text">activities4all.com</span></a></li>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                        <h2 class="footer-heading">ACTIVITIES4ALL</h2>
+                        <p>Activities4All é responsável pela coordenação de atividades em grupo de DESPORTOS RADICAIS
+                            ajudá-mos a gerir as suas reservas de atividades, os participantes e o material no terreno.
+                        </p>
+                        <ul class="ftco-footer-social p-0">
+                            <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
+                                    title="Twitter"><span class="fa fa-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
+                                    title="Facebook"><span class="fa fa-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
+                                    title="Instagram"><span class="fa fa-instagram"></span></a></li>
                         </ul>
                     </div>
+
+                    <div class="col-md-6 col-lg-2 pl-lg-5 mb-4 mb-md-0">
+                        <h2 class="footer-heading">LINKS</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">Início</a></li>
+                            <li><a href="#" class="py-2 d-block">Sobre Nós</a></li>
+                            <li><a href="#" class="py-2 d-block">Atividades</a></li>
+                            <li><a href="#" class="py-2 d-block">Blog</a></li>
+                            <li><a href="#" class="py-2 d-block">Contactos</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mt-58 mb-md-0">
+                        <ul class="list-unstyled">
+                            <li></li>
+                            <li><a href="#" class="py-2 d-block">Termos e condições gerais</a></li>
+                            <li><a href="#" class="py-2 d-block">Termos e condições de reservas</a></li>
+                            <li><a href="#" class="py-2 d-block">Política de Privacidade</a></li>
+                            <li><a href="#" class="py-2 d-block">Política de utilização de cookies</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                        <h2 class="footer-heading">CONTACTOS</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon fa fa-map"></span><span class="text">Rua do Escorregadouro, Póvoa
+                                        de
+                                        Lanhoso, Braga</span></li>
+                                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">(+325) 253 657
+                                            984</span></a></li>
+                                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span
+                                            class="text">info@activities4all.com</span></a></li>
+                                <li><a href="#"><span class="icon fa fa-globe"></span><span
+                                            class="text">activities4all.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-
-        </div>
-    </footer>
-
+        </footer>
+    </div>
     <script src="js/adventure/js/vendor/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
         integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
@@ -185,7 +195,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="bd/bd.js"></script>
     <script src="bd/atividades.js"></script>
-    
+    <script src="js/todos.js"></script>
 </body>
 
 </html>
