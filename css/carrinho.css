@@ -1,0 +1,76 @@
+.default-header{
+    background-color: #222;;
+}
+
+.selecionada{
+    background-color: #005400;
+    height: 70px;
+    padding-top: 1%;
+}
+
+#imagem-carrinho{
+    width: 100%;
+    height: 80%;
+}
+
+#carrinhoLista{
+    padding: 2% 5% 2% 5%;
+    background-color: #f2f4f6;
+    width: 100%;
+    margin: 0;
+}
+
+.meio{
+    padding-top: 2%;
+}
+
+.campos{
+    padding-bottom: 5%;
+    padding: auto;
+}
+
+input{
+    border:0;
+}
+
+.icones{
+    color: #005400;
+    font-size: 30px;    
+}
+
+.campo1{
+    height: 30px;
+}
+
+.campo{
+    padding-left: 1%;
+}
+
+.seccoes{
+    width: 100%;
+}
+
+.botaoAdd{
+    background-color: #005400;
+    width: 12%;
+    border-radius: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 0;
+}
+
+.participantes{
+    width: 20%;
+    text-align: center;
+}
+
+.iconLixo{
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+}
+
+.linha{
+    color:#1b1919;
+}

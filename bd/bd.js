@@ -824,3 +824,10 @@ const users = [{
 "password": "1234"}]
 
 localStorage.setItem('utilizadores', JSON.stringify(users));
+
+const reservas = [{
+    "id": "1",
+    "user": "12345"
+}]
+
+localStorage.setItem('reservas', JSON.stringify(reservas));

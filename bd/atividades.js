@@ -60,7 +60,7 @@ let dados1 = {
         "preco": "15.99"
     }],
     "requisitos": {
-        "participantes": "1",
+        "participantes": "2",
         "idadeMin": "12",
         "idadeMax": "65",
         "pesoMin": "40",
@@ -102,7 +102,7 @@ const createCardElement = (postData) => {
 
 const nrReservas = () => {
     const reservas = JSON.parse(localStorage.getItem('reservas'));
-    const nrCarrinho = document.getElementById('carrinho1');
+    const carrinho1 = document.getElementById('carrinho1');
     const user = JSON.parse(localStorage.getItem('utilizadorLigado'));
     if (user) {
         carrinho1.innerHTML = `<div id="carrinho">
@@ -118,6 +118,9 @@ const nrReservas = () => {
             contador.innerHTML = `<p class="text-center m-0 badge badge-pill badge-danger">${reservasFiltered.length}</p>`;
             
         }
+        carrinho1.addEventListener('click', () =>{
+            window.location.href = 'carrinho.html';
+        })
     }
 }
 
