@@ -827,7 +827,11 @@ localStorage.setItem('utilizadores', JSON.stringify(users));
 
 const reservas = [{
     "id": "1",
-    "user": "12345"
+    "user": "12345",
+    "data":{
+        "data": "01/01/1900",
+        "hora": "00:00"
+    }
 }]
 
 localStorage.setItem('reservas', JSON.stringify(reservas));

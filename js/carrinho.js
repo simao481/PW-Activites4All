@@ -86,7 +86,6 @@ nrParticipantes.forEach(nr => {
         const marc = marc1.filter(post => !(post.id === nr.id && post.user === username[0].user))
         localStorage.setItem('reservas', JSON.stringify(marc));
         nr.innerHTML= '';
-
     })
 })
 
