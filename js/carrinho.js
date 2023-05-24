@@ -6,47 +6,50 @@ const marcacoesFiltro = marcacoes.filter(post => post.user == username[0].user)
 marcacoesFiltro.forEach(element => {
     const atv = JSON.parse(localStorage.getItem('atividades'));
     const atv1 = atv.filter(post => post.id == element.id)
-    const codigo = `<div class="row nrPtc" id="${atv1[0].id}">
-    <div class="col">
-        <h4 class="pb-10" id="nome">${atv1[0].titulo}</h4>
-        <img src="images/${atv1[0].imagem}.jpeg" id="imagem-carrinho">
-    </div>
-    <div class="col-5 meio">
-        <div class="campos d-flex">
-            <i class="fa-solid fa-calendar icones"></i>
-            <div class="campo">
-                <input type="date" id="data" class="campo1" placeholder="data">
+    const codigo = `
+        <div class="atv" id="${atv1[0].id}">
+            <div class="row nrPtc" ">
+                <div class="col">
+                    <h4 class="pb-10" id="nome">${atv1[0].titulo}</h4>
+                    <img src="images/${atv1[0].imagem}.jpeg" id="imagem-carrinho">
+                </div>
+                <div class="col-5 meio">
+                    <div class="campos d-flex">
+                        <i class="fa-solid fa-calendar icones"></i>
+                        <div class="campo">
+                            <input type="date" id="data" class="campo1" placeholder="data">
+                        </div>
+                    </div>
+                    <div class="campos d-flex">
+                        <i class="fa-solid fa-clock icones"></i>
+                        <div class="campo">
+                            <input type="time" id="hora" class="campo1" placeholder="data">
+                        </div>
+                    </div>
+                    <div class="campos d-flex">
+                        <i class="fa-solid fa-person icones"></i>
+                        <p class="m-0" style="padding-top: 0.5%; padding-left: 1%;">Nº Pessoas</p>
+                        <div class="campo d-flex" >
+                            <button class="text-center text-white botaoAdd diminuir">-</button>
+                            <input type="text" class="campo1 participantes" readonly>
+                            <button class="text-center text-white botaoAdd adicionar">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 pt-90">
+                    <h5 id="preco">${atv1[0].preco * atv1[0].requisitos.participantes}€</h5>
+                </div>
+                <div class="col-2 pt-80">
+                    <span class="iconLixo"><i class="fa-solid fa-trash"></i></span>
+                </div>
             </div>
-        </div>
-        <div class="campos d-flex">
-            <i class="fa-solid fa-clock icones"></i>
-            <div class="campo">
-                <input type="time" id="hora" class="campo1" placeholder="data">
-            </div>
-        </div>
-        <div class="campos d-flex">
-            <i class="fa-solid fa-person icones"></i>
-            <p class="m-0" style="padding-top: 0.5%; padding-left: 1%;">Nº Pessoas</p>
-            <div class="campo d-flex" >
-                <button class="text-center text-white botaoAdd diminuir">-</button>
-                    <input type="text" class="campo1 participantes" readonly>
-                <button class="text-center text-white botaoAdd adicionar">+</button>
-            </div>
-        </div>
-    </div>
-    <div class="col-2 pt-90">
-        <h5 id="preco">${atv1[0].preco * atv1[0].requisitos.participantes}€</h5>
-    </div>
-    <div class="col-2 pt-80">
-        <span class="iconLixo"><i class="fa-solid fa-trash"></i></span>
-    </div>
-</div>
-<hr class="linha">`;
+            <hr class="linha">
+        </div>`;
     tudo.innerHTML += codigo;
 
 });
 
-const nrParticipantes = document.querySelectorAll('.nrPtc');
+const nrParticipantes = document.querySelectorAll('.atv');
 
 nrParticipantes.forEach(nr => {
     const atv = JSON.parse(localStorage.getItem('atividades'));
