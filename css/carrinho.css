@@ -15,7 +15,6 @@
 
 #carrinhoLista{
     padding: 2% 5% 2% 5%;
-    background-color: #f2f4f6;
     width: 100%;
     margin: 0;
 }
@@ -48,6 +47,7 @@ input{
 
 .seccoes{
     width: 100%;
+    margin: 0;
 }
 
 .botaoAdd{
@@ -73,4 +73,45 @@ input{
 
 .linha{
     color:#1b1919;
+}
+
+.drop{
+    border:0;
+    background-color: #fff;
+}
+
+.botaoSeguinte{
+    padding-right: 5%;
+    text-align: end;
+    padding-bottom: 5%;
+}
+
+#btnSeguinte, #btnSeguinte:focus, #btnFinal, #btnFinal:focus{
+    background-color: #005400;
+    border-color: #005400;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#btnSeguinte:hover, #btnFinal:hover{
+    color:#005400;
+    background-color: transparent;
+    border-color: #005400;
+}
+
+.metodos{
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.metodos1{
+    width: 300px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.certo{
+    color:#005400;
+    font-size: 60px;
 }

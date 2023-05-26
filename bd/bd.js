@@ -791,7 +791,7 @@ let atividades = [
             "pesoMin": "40",
             "pesoMax": "100",
             "altura": "1.50",
-            "tempo": "120"
+            "tempo": "60"
         },
         "avaliacao": "5"
     }
@@ -820,18 +820,9 @@ const users = [{
     "user": "simao",
     "password": "1234"
 },
-{"user": "simao1",
-"password": "1234"}]
-
-localStorage.setItem('utilizadores', JSON.stringify(users));
-
-const reservas = [{
-    "id": "1",
-    "user": "12345",
-    "data":{
-        "data": "01/01/1900",
-        "hora": "00:00"
-    }
+{
+    "user": "simao1",
+    "password": "1234"
 }]
 
-localStorage.setItem('reservas', JSON.stringify(reservas));
+localStorage.setItem('utilizadores', JSON.stringify(users));
