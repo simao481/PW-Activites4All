@@ -10,7 +10,7 @@ botao.addEventListener('click', () =>{
     if(user.length !== 0 && user[0].password === password.value){
         localStorage.setItem("utilizadorLigado", JSON.stringify(user));
         erro.innerHTML= '';
-        window.history.back();
+        window.location.href = 'index.html'
     }else{
         erro.innerHTML = `<p>Username ou password incorretos!</p>`
     }
