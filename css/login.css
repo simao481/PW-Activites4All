@@ -849,8 +849,7 @@ print and (-ms-high-contrast:none) {
 
 .border-green-600 {
     --border-opacity: 1;
-    border-color: #057a55;
-    border-color: rgba(5, 122, 85, var(--border-opacity))
+    border-color: #005400;
 }
 
 .border-purple-600 {
@@ -2134,4 +2133,10 @@ print and (-ms-high-contrast:none) {
     margin-top: 3%;
     color:red;
     font-size: small;
+}
+
+.bg-green-6001{
+    background-color: #005400;
+    border-color:#005400;
+    border-width: 2px;
 }

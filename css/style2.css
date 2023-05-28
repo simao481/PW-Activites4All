@@ -1783,3 +1783,15 @@ button.bg-light:focus {
     color: #fff;
     font-size: 20px;
 }
+
+.menuPerfil{
+    background-color: #222;
+}
+
+.ditem{
+    color: #fff;
+}
+
+.ditem:hover{
+    color: #222;
+}

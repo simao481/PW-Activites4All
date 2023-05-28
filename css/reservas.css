@@ -1,0 +1,11 @@
+.default-header{
+    background-color: #222;
+}
+
+.linhaRes{
+    cursor: pointer;
+}
+
+.linhaRes:hover{
+    background-color: #f2f4f6;
+}

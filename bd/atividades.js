@@ -150,7 +150,7 @@ const addCardClickListener = () => {
             event.stopPropagation();
             const userLogado = JSON.parse(localStorage.getItem('utilizadorLigado'));
             if (userLogado) {
-                const reserva = { "id": cardCorpo.id, "data":{"data": "", "hora": ""} }
+                const reserva = { "id": cardCorpo.id, participantes: "" ,"data":{"data": "", "hora": ""} }
                 const reservas = JSON.parse(localStorage.getItem('carrinho'));
                 if (reservas) {
                     const reservasFiltered = reservas.find(post => post.user === userLogado[0].user);

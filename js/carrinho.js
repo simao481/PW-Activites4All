@@ -178,11 +178,13 @@ seguinte.addEventListener('click', () => {
     atvs.forEach(atv => {
         const data = atv.querySelector('#data');
         const time = atv.querySelector('.drop');
+        const partic = atv.querySelector('.participantes');
         if (data.value.length > 0 && time.textContent.length !== 74) {
             data.style.border = 'none';
             time.style.border = 'none';
             carrinho2.atividades.find(post => post.id === atv.id).data.data = data.value;
             carrinho2.atividades.find(post => post.id === atv.id).data.hora = time.textContent;
+            carrinho2.atividades.find(post => post.id === atv.id).participantes = partic.value;
             localStorage.setItem('carrinho', JSON.stringify(carrinho));
         } else {
             verificacao = 0;
@@ -195,11 +197,17 @@ seguinte.addEventListener('click', () => {
 
     if (verificacao === 1) {
         const precoTotal = document.getElementById('precoTotal');
+        const dataAtual = new Date();
+        const dia = String(dataAtual.getDate()).padStart(2, '0');
+        const mes = String(dataAtual.getMonth() + 1).padStart(2, '0');
+        const ano = dataAtual.getFullYear();
+        const dataFormatada = `${dia}/${mes}/${ano}`;
         const reserva = {
             id: (username[0].user + Date.now()),
             user: username[0].user,
             atividades: carrinho2.atividades,
             total: precoTotal.textContent,
+            data: dataFormatada,
             estado: 'Pendente'
         }
 
