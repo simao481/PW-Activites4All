@@ -228,9 +228,8 @@ seguinte.addEventListener('click', () => {
             </div>`;
 
         const corp = document.getElementById('mets');
-
         corp.innerHTML = `
-            <div class="row" style="width: 100%;">
+            <div class="mt-100 row" style="width: 100%;">
                 <div class="col text-center" id="mbway">
                     <img class="metodos1" src="images/mbway.png">
                 </div>
