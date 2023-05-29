@@ -208,7 +208,8 @@ seguinte.addEventListener('click', () => {
             atividades: carrinho2.atividades,
             total: precoTotal.textContent,
             data: dataFormatada,
-            estado: 'Pendente'
+            estado: 'Pendente',
+            gestor: ''
         }
 
         if (reservas) {
