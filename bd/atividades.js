@@ -25,56 +25,6 @@ fetch('/bd/destaques.json')
     });
 */
 
-
-let dados1 = {
-    "id": "26",
-    "titulo": "Nado Livre4",
-    "preco": "12.99",
-    "imagem": "agua",
-    "tempo": "2h",
-    "categoria": "Terra",
-    "icon": "fas fa-water",
-    "descricao": "Uma descrição qualquer!!!",
-    "materialNecessario": ["Calçado confortável", "Roupa confortável", "Boa vontade![Obrigatório]"],
-    "materialIncluido": ["Capacete", "Luvas", "Corda", "Arnês"],
-    "dificuldade": "3",
-    "localizacao": "1",
-    "pacotes": [{
-        "nomePacote": "Ganda Pacote",
-        "preco": "15.99"
-    },
-    {
-        "nomePacote": "Ganda Pacote",
-        "preco": "15.99"
-    },
-    {
-        "nomePacote": "Ganda Pacote",
-        "preco": "15.99"
-    },
-    {
-        "nomePacote": "Ganda Pacote",
-        "preco": "15.99"
-    },
-    {
-        "nomePacote": "Ganda Pacote",
-        "preco": "15.99"
-    }],
-    "requisitos": {
-        "participantes": "2",
-        "idadeMin": "12",
-        "idadeMax": "65",
-        "pesoMin": "40",
-        "pesoMax": "100",
-        "altura": "1.50",
-        "tempo": "120"
-    },
-    "avaliacao": "4"
-}
-
-const lista = JSON.parse(localStorage.getItem('atividades')) || [];
-lista.push(dados1);
-localStorage.setItem('atividades', JSON.stringify(lista));
-
 const createCardElement = (postData) => {
     const postElement = document.createElement("div");
     postElement.classList.add("card1");
@@ -114,17 +64,17 @@ const nrReservas = () => {
             </svg></p>`;
         const contador = document.getElementById('contador');
         if(reservas){
-            const reservasFiltered = reservas.find(post => post.user === user[0].user);
+            const reservasFiltered = reservas.find(post => post.email === user.email);
             if(reservasFiltered){
                 if (reservasFiltered.atividades.length !== 0)
                     contador.innerHTML = `<p class="text-center m-0 badge badge-pill badge-danger">${reservasFiltered.atividades.length}</p>`;
             }else{
-                reservas.push({user: user[0].user, atividades:[]});
+                reservas.push({email: user.email, atividades:[]});
                 localStorage.setItem('carrinho', JSON.stringify(reservas));
             }
                 
         }else{
-            localStorage.setItem('carrinho', JSON.stringify([{user: user[0].user, atividades:[]}]));
+            localStorage.setItem('carrinho', JSON.stringify([{email: user.email, atividades:[]}]));
         }
         carrinho1.addEventListener('click', () => {
             window.location.href = 'carrinho.html';
@@ -153,17 +103,17 @@ const addCardClickListener = () => {
                 const reserva = { "id": cardCorpo.id, participantes: "" ,"data":{"data": "", "hora": ""} }
                 const reservas = JSON.parse(localStorage.getItem('carrinho'));
                 if (reservas) {
-                    const reservasFiltered = reservas.find(post => post.user === userLogado[0].user);
+                    const reservasFiltered = reservas.find(post => post.email === userLogado.email);
                     const reservaFind = reservasFiltered.atividades.find(post => post.id === reserva.id);
                     if (reservaFind) {
                         alert('Esta atividade já está no seu carrinho!');
                     } else {
-                        reservas.find(item => item.user === userLogado[0].user).atividades.push(reserva);
+                        reservas.find(item => item.email === userLogado.email).atividades.push(reserva);
                         localStorage.setItem('carrinho', JSON.stringify(reservas));
                         nrReservas();
                     }
                 }else{
-                    localStorage.setItem('carrinho', JSON.stringify([{user: userLogado[0].user, atividades:[reserva]}]));
+                    localStorage.setItem('carrinho', JSON.stringify([{email: userLogado.email, atividades:[reserva]}]));
                     nrReservas();
                 }
 

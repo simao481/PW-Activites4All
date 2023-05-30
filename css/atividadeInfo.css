@@ -16,7 +16,6 @@
 
 .card-info{
     width: 110%;
-    height: 100%;
     padding: 2% 5% 5% 5%;
     box-shadow: 0px 0px 50px 0px rgba(157, 157, 157, 0.3);
 }
@@ -55,23 +54,6 @@
 
 .titulo-card{
     padding: 4% 1% 1% 4%;
-}
-
-.escolha{
-    font-size: 20px;
-    color: #000;
-    padding-top: 10%;
-}
-
-.escolha input{
-    width: 20px;
-    height: 20px;
-    accent-color: #005400;
-    cursor: pointer;
-}
-
-.escolha input:checked{
-    background-color: #005400;
 }
 
 .cartao-carrinho{

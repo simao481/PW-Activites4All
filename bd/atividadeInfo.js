@@ -7,7 +7,6 @@ const materialIncluido = document.getElementById('materialIncluido');
 const dificuldade = document.getElementById('dificuldade');
 const localizacao = document.getElementById('localizacao');
 const cardTitulo = document.getElementById('card-titulo');
-const opcoes = document.getElementById('opcoes');
 const participantes = document.getElementById('participantes');
 const idadeMin = document.getElementById('idadeMin');
 const idadeMax = document.getElementById('idadeMax');
@@ -51,29 +50,7 @@ if (id) {
         localizacao.innerHTML = postData.localizacao;
         cardTitulo.innerHTML = postData.titulo;
         const primeiro = postData.pacotes[0];
-        postData.pacotes.forEach((material) => {
-            if(material === primeiro){
-                const novoCodigo = `<div class="col-sm mb-10">
-                            <input class="botaoEscolha" type="radio" name="escolher" style="--c:#005400;"
-                checked>
-            <label for="opcao1" style="margin-bottom:16px;">${material.nomePacote}</label>
-        </div>
-        <div class="col-sm mb-10">
-            <p id="preco">${material.preco}€/pessoa</p>
-        </div>
-        <div class="w-100"></div>`;
-        opcoes.innerHTML += novoCodigo;
-            }else{
-                const novoCodigo = `<div class="col-sm mb-10">
-                            <input class="botaoEscolha" type="radio" name="escolher" style="--c:#005400;">
-            <label style="margin-bottom:16px;" for="opcao1">${material.nomePacote}</label>
-        </div>
-        <div class="col-sm">
-            <p id="preco">${material.preco}€/pessoa</p>
-        </div>
-        <div class="w-100"></div>`;
-        opcoes.innerHTML += novoCodigo;
-            }});
+        
         participantes.innerHTML = postData.requisitos.participantes;
         idadeMin.innerHTML = postData.requisitos.idadeMin;
         idadeMax.innerHTML = postData.requisitos.idadeMax;
@@ -156,3 +133,36 @@ const postMethods2 = () => {
 };
 
 postMethods2();
+
+const addCarrinho = document.getElementById('addCarrinho');
+
+addCarrinho.addEventListener('click', () => {
+    const userLogado = JSON.parse(localStorage.getItem('utilizadorLigado'));
+    const atividadeSelect = JSON.parse(localStorage.getItem('atividadeSelecionada'));
+    if (userLogado) {
+        const reserva = { "id": atividadeSelect, participantes: "" ,"data":{"data": "", "hora": ""} }
+        const reservas = JSON.parse(localStorage.getItem('carrinho'));
+        if (reservas) {
+            const reservasFiltered = reservas.find(post => post.email === userLogado.email);
+            const reservaFind = reservasFiltered.atividades.find(post => post.id === reserva.id);
+            if (reservaFind) {
+                alert('Esta atividade já está no seu carrinho!');
+            } else {
+                reservas.find(item => item.email === userLogado.email).atividades.push(reserva);
+                localStorage.setItem('carrinho', JSON.stringify(reservas));
+                alert('Atividade adicionada ao carrinho com sucesso!');
+            }
+        }else{
+            localStorage.setItem('carrinho', JSON.stringify([{email: userLogado.email, atividades:[reserva]}]));
+        }
+
+    } else {
+        window.location.href = 'login.html';
+    }
+});
+
+const verCarrinho = document.getElementById('verCarrinho');
+
+verCarrinho.addEventListener('click', () =>{
+    window.location.href = "carrinho.html";
+})

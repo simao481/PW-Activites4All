@@ -1,7 +1,7 @@
 const reservas = JSON.parse(localStorage.getItem('reservas'));
 const user = JSON.parse(localStorage.getItem('utilizadorLigado'));
 const tabela = document.getElementById('tabelaReservas');
-const reservasUser = reservas.filter(post => post.user === user[0].user);
+const reservasUser = reservas.filter(post => post.email === user.email);
 
 function getStatusLabel(estado) {
   if (estado === 'Pendente') {
@@ -50,6 +50,15 @@ function renderTable() {
     `;
     tableBody.innerHTML += row;
   }
+  const linhasReservas = document.querySelectorAll('.linhaRes');
+
+  linhasReservas.forEach(linha =>{
+      linha.addEventListener('click', () =>{
+          localStorage.setItem('reservaSelecionada', linha.id);
+          window.location.href = 'reservaInfo.html';
+      });
+  });
+
 }
 
 const linhas = document.querySelectorAll('.linhaReserva');

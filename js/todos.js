@@ -4,7 +4,7 @@ const logado = JSON.parse(localStorage.getItem('utilizadorLigado'));
         navEntrar.innerHTML = `
             <li class="dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                    <i class="fa-solid fa-circle-user"></i> ${logado[0].user}
+                    <i class="fa-solid fa-circle-user"></i> ${logado.nome}
                 </a>
                 <div class="dropdown-menu menuPerfil">
                     <a class="dropdown-item ditem" href="reservas.html">Minha Área</a>

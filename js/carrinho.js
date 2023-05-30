@@ -1,17 +1,17 @@
 const tudo = document.getElementById('carrinhoLista');
 const marcacoes = JSON.parse(localStorage.getItem('carrinho'));
 const username = JSON.parse(localStorage.getItem('utilizadorLigado'));
-const marcacoesFiltro = marcacoes.find(post => post.user == username[0].user);
+const marcacoesFiltro = marcacoes.find(post => post.email == username.email);
 function carrinho() {
     marcacoesFiltro.atividades.forEach(element => {
         const atv = JSON.parse(localStorage.getItem('atividades'));
-        const atv1 = atv.filter(post => post.id == element.id)
+        const atv1 = atv.find(post => post.id == element.id)
         const codigo = `
-        <div class="atv" id="${atv1[0].id}">
+        <div class="atv" id="${atv1.id}">
             <div class="row nrPtc" ">
                 <div class="col">
-                    <h4 class="pb-10" id="nome">${atv1[0].titulo}</h4>
-                    <img src="images/${atv1[0].imagem}.jpeg" id="imagem-carrinho">
+                    <h4 class="pb-10" id="nome">${atv1.titulo}</h4>
+                    <img src="images/${atv1.imagem}.jpeg" id="imagem-carrinho">
                 </div>
                 <div class="col-5 meio">
                     <div class="campos d-flex">
@@ -44,7 +44,7 @@ function carrinho() {
                     </div>
                 </div>
                 <div class="col-2 pt-90">
-                    <h5 id="preco">${atv1[0].preco * atv1[0].requisitos.participantes}€</h5>
+                    <h5 id="preco">${atv1.preco * atv1.requisitos.participantes}€</h5>
                 </div>
                 <div class="col-2 pt-80">
                     <span class="iconLixo"><i class="fa-solid fa-trash"></i></span>
@@ -60,16 +60,16 @@ function carrinho() {
 
     nrParticipantes.forEach(nr => {
         const atv = JSON.parse(localStorage.getItem('atividades'));
-        const atv1 = atv.filter(post => post.id == nr.id);
+        const atv1 = atv.find(post => post.id == nr.id);
         let campo = nr.querySelector('.participantes');
-        let nrPart = atv1[0].requisitos.participantes;
+        let nrPart = atv1.requisitos.participantes;
         campo.value = nrPart;
 
         let preco = nr.querySelector('#preco');
         let total = document.getElementById('precoTotal');
-        total.textContent = parseFloat(total.textContent) + (atv1[0].preco * atv1[0].requisitos.participantes);
+        total.textContent = parseFloat(total.textContent) + (atv1.preco * atv1.requisitos.participantes);
 
-        const horario = marcacoes.find(post => post.user === username[0].user).atividades.find(post => post.id === nr.id);
+        const horario = marcacoes.find(post => post.email === username.email).atividades.find(post => post.id === nr.id);
         if (horario.data.data.length !== 0) {
             const data = nr.querySelector('#data');
             data.value = horario.data.data;
@@ -80,7 +80,7 @@ function carrinho() {
             hora1.textContent = horario.data.hora;
             const dropItem = nr.querySelector('.dropdown-menu');
             dropItem.innerHTML = '';
-            const horas = Math.round(atv1[0].requisitos.tempo / 60);
+            const horas = Math.round(atv1.requisitos.tempo / 60);
             for (let i = 8; i <= (20 - horas); i++) {
                 const horarioInicial = i;
                 const horarioFinal = i + horas;
@@ -103,9 +103,9 @@ function carrinho() {
             let p = campo.value;
             p++;
             campo.value = p;
-            let preco1 = atv1[0].preco * p;
+            let preco1 = atv1.preco * p;
             preco.textContent = preco1.toFixed(2) + '€';
-            let total2 = parseFloat(total.textContent) + parseFloat(atv1[0].preco);
+            let total2 = parseFloat(total.textContent) + parseFloat(atv1.preco);
             total1.innerHTML = total2.toFixed(2);
         });
 
@@ -116,9 +116,9 @@ function carrinho() {
             if (p > nrPart)
                 p--;
             campo.value = p;
-            let preco1 = atv1[0].preco * p;
+            let preco1 = atv1.preco * p;
             preco.textContent = preco1.toFixed(2) + '€';
-            let total2 = parseFloat(total.textContent) - parseFloat(atv1[0].preco);
+            let total2 = parseFloat(total.textContent) - parseFloat(atv1.preco);
             total1.innerHTML = total2.toFixed(2);
         });
 
@@ -126,24 +126,21 @@ function carrinho() {
 
         lixo.addEventListener('click', () => {
             const marc1 = JSON.parse(localStorage.getItem('carrinho'));
-            const usuarioIndex = marc1.findIndex(item => item.user === username[0].user);
+            const usuarioIndex = marc1.findIndex(item => item.email === username.email);
 
             if (usuarioIndex !== -1) {
-                // Remover a atividade do usuário
                 const usuario = marc1[usuarioIndex];
                 usuario.atividades = usuario.atividades.filter(atividade => atividade.id !== nr.id);
                 localStorage.setItem("carrinho", JSON.stringify(marc1));
-                nr.innerHTML = '';
+                nr.remove();
             }
         })
 
         const data = nr.querySelector('#data');
 
         data.addEventListener('change', () => {
-            const carrinho = JSON.parse(localStorage.getItem('carrinho'));
-            const carrinhoUser = carrinho.find(post => post.user === username[0].user);
             const dropItem = nr.querySelector('.dropdown-menu');
-            const horas = Math.round(atv1[0].requisitos.tempo / 60);
+            const horas = Math.round(atv1.requisitos.tempo / 60);
             dropItem.innerHTML = '';
             for (let i = 8; i <= (20 - horas); i++) {
                 const horarioInicial = i;
@@ -169,12 +166,12 @@ carrinho();
 const seguinte = document.getElementById('btnSeguinte');
 seguinte.addEventListener('click', () => {
     let verificacao = 1;
-    //tudo.innerHTML = '';
 
     let reservas = JSON.parse(localStorage.getItem('reservas'));
     const carrinho = JSON.parse(localStorage.getItem('carrinho'));
-    const carrinho2 = carrinho.find(post => post.user === username[0].user);
+    const carrinho2 = carrinho.find(post => post.email === username.email);
     const atvs = document.querySelectorAll('.atv');
+    console.log(atvs)
     atvs.forEach(atv => {
         const data = atv.querySelector('#data');
         const time = atv.querySelector('.drop');
@@ -203,8 +200,8 @@ seguinte.addEventListener('click', () => {
         const ano = dataAtual.getFullYear();
         const dataFormatada = `${dia}/${mes}/${ano}`;
         const reserva = {
-            id: (username[0].user + Date.now()),
-            user: username[0].user,
+            id: (username.email.split('@')[0] + Date.now()),
+            email: username.email,
             atividades: carrinho2.atividades,
             total: precoTotal.textContent,
             data: dataFormatada,
@@ -273,7 +270,7 @@ seguinte.addEventListener('click', () => {
             corpoTudo.innerHTML = `<h1 class="text-center pt-100"><i class="fa-sharp fa-solid fa-circle-check certo"></i><br>Obrigado pela sua compra!</h1>
             <p class="text-center m-0 pb-100"><a  href="index.html">Voltar ao início</a></p>`;
             const car = JSON.parse(localStorage.getItem('carrinho'));
-            const car1 = car.filter(post => !(post.user === username[0].user));
+            const car1 = car.filter(post => !(post.email === username.email));
             console.log(car1);
             localStorage.setItem('carrinho', JSON.stringify(car1));
         });
