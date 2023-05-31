@@ -2,7 +2,7 @@ const reservas = JSON.parse(localStorage.getItem('reservas'));
 const username = JSON.parse(localStorage.getItem('utilizadorLigado'));
 const lista = document.getElementById('reservas');
 const idRes = localStorage.getItem('reservaSelecionada');
-const reservasFiltro = reservas.find(post => post.email == username.email && post.id === idRes);
+const reservasFiltro = reservas.find(post => (post.email === username.email || post.gestor === username.user)&& post.id === idRes);
 
 function carrinho() {
     reservasFiltro.atividades.forEach(element => {

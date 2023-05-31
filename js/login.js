@@ -4,14 +4,22 @@ const password = document.getElementById('password');
 const erro = document.getElementById('erro');
 
 const users = JSON.parse(localStorage.getItem('utilizadores'));
+const gestores = JSON.parse(localStorage.getItem('gestores'));
 
 botao.addEventListener('click', () => {
-    const user = users.filter(nome => nome.user === username.value);
-    if (user.length !== 0 && user[0].password === password.value) {
+    const user = users.find(nome => nome.email === username.value);
+    const gestor = gestores.find(nome => nome.user === username.value);
+    if (user && user.password === password.value) {
+        user.role = "cliente";
         localStorage.setItem("utilizadorLigado", JSON.stringify(user));
         erro.innerHTML = '';
         window.location.href = 'index.html'
-    } else {
+    } else if(gestor && gestor.password === password.value) {
+        gestor.role = 'gestor';
+        localStorage.setItem("utilizadorLigado", JSON.stringify(gestor));
+        erro.innerHTML = '';
+        window.location.href = 'index.html'
+    }else{
         erro.innerHTML = `<p>Username ou password incorretos!</p>`
     }
 })
@@ -19,6 +27,7 @@ botao.addEventListener('click', () => {
 function handleCredentialResponse(response) {
     const data = jwt_decode(response.credential);
     const user = {
+        role: 'cliente',
         email: data.email,
         password: '',
         nome: data.name
