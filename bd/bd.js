@@ -20,7 +20,7 @@ let atividades = [
             "pesoMin": "30",
             "pesoMax": "120",
             "altura": "Sem informação",
-            "tempo": "5"
+            "tempo": "60"
         },
         "avaliacao": "5"
     },
@@ -45,7 +45,7 @@ let atividades = [
             "pesoMin": "40",
             "pesoMax": "90",
             "altura": "Sem informação",
-            "tempo": "15"
+            "tempo": "60"
         },
         "avaliacao": "3"
     },
@@ -70,7 +70,7 @@ let atividades = [
             "pesoMin": "30",
             "pesoMax": "120",
             "altura": "1.50",
-            "tempo": "15"
+            "tempo": "60"
         },
         "avaliacao": "3"
     },
@@ -95,7 +95,7 @@ let atividades = [
             "pesoMin": "40",
             "pesoMax": "130",
             "altura": "1.50",
-            "tempo": "15"
+            "tempo": "60"
         },
         "avaliacao": "4"
     },
@@ -120,7 +120,7 @@ let atividades = [
             "pesoMin": "20",
             "pesoMax": "150",
             "altura": "Sem informação",
-            "tempo": "20"
+            "tempo": "60"
         },
         "avaliacao": "4"
     },
@@ -145,7 +145,7 @@ let atividades = [
             "pesoMin": "30",
             "pesoMax": "60",
             "altura": "Sem informação",
-            "tempo": "5"
+            "tempo": "60"
         },
         "avaliacao": "4"
     },
@@ -170,7 +170,7 @@ let atividades = [
             "pesoMin": "Sem informação",
             "pesoMax": "120",
             "altura": "Sem informação",
-            "tempo": "10"
+            "tempo": "60"
         },
         "avaliacao": "3"
     },
@@ -195,7 +195,7 @@ let atividades = [
             "pesoMin": "35",
             "pesoMax": "100",
             "altura": "Sem informação",
-            "tempo": "10"
+            "tempo": "60"
         },
         "avaliacao": "3"
     },
@@ -220,7 +220,7 @@ let atividades = [
             "pesoMin": "40",
             "pesoMax": "100",
             "altura": "1.50",
-            "tempo": "150"
+            "tempo": "180"
         },
         "avaliacao": "3"
     },
@@ -370,7 +370,7 @@ let atividades = [
             "pesoMin": "Sem informação",
             "pesoMax": "Sem informação",
             "altura": "Sem informação",
-            "tempo": "150"
+            "tempo": "180"
         },
         "avaliacao": "4"
     },
@@ -395,7 +395,7 @@ let atividades = [
             "pesoMin": "Sem informação",
             "pesoMax": "Sem informação",
             "altura": "Sem informação",
-            "tempo": "175"
+            "tempo": "180"
         },
         "avaliacao": "3"
     },
@@ -420,7 +420,7 @@ let atividades = [
             "pesoMin": "Sem informação",
             "pesoMax": "Sem informação",
             "altura": "Sem informação",
-            "tempo": "10"
+            "tempo": "60"
         },
         "avaliacao": "5"
     },
@@ -445,7 +445,7 @@ let atividades = [
             "pesoMin": "Sem informação",
             "pesoMax": "Sem informação",
             "altura": "Sem informação",
-            "tempo": "10"
+            "tempo": "60"
         },
         "avaliacao": "5"
     },
@@ -570,7 +570,7 @@ let atividades = [
             "pesoMin": "Sem informação",
             "pesoMax": "Sem informação",
             "altura": "1.10",
-            "tempo": "45"
+            "tempo": "60"
         },
         "avaliacao": "5"
     },
@@ -595,7 +595,7 @@ let atividades = [
             "pesoMin": "Sem informação",
             "pesoMax": "Sem informação",
             "altura": "Sem informação",
-            "tempo": "20"
+            "tempo": "60"
         },
         "avaliacao": "4"
     },
@@ -621,12 +621,25 @@ const destaques = [
 localStorage.setItem('destaques', JSON.stringify(destaques));
 
 const users = [{
-    "user": "simao",
-    "password": "1234"
+    "email": "simao@gmail.com",
+    "password": "1234",
+    "nome": "simao"
 },
 {
-    "user": "simao1",
-    "password": "1234"
+    "email": "simao1@gmail.com",
+    "password": "1234",
+    "nome": "simao1"
 }]
 
 localStorage.setItem('utilizadores', JSON.stringify(users));
+
+const gestores = [{
+    "user": "rita1",
+    "password": "1234",
+},
+{
+    "user": "cata2",
+    "password": "1234",
+}]
+
+localStorage.setItem('gestores', JSON.stringify(gestores));

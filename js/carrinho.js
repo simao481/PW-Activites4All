@@ -3,11 +3,11 @@ const marcacoes = JSON.parse(localStorage.getItem('carrinho'));
 const username = JSON.parse(localStorage.getItem('utilizadorLigado'));
 const marcacoesFiltro = marcacoes.find(post => post.email == username.email);
 function carrinho() {
-    if(marcacoesFiltro.atividades.length !== 0){
-    marcacoesFiltro.atividades.forEach(element => {
-        const atv = JSON.parse(localStorage.getItem('atividades'));
-        const atv1 = atv.find(post => post.id == element.id)
-        const codigo = `
+    if (marcacoesFiltro.atividades.length !== 0) {
+        marcacoesFiltro.atividades.forEach(element => {
+            const atv = JSON.parse(localStorage.getItem('atividades'));
+            const atv1 = atv.find(post => post.id == element.id)
+            const codigo = `
         <div class="atv" id="${atv1.id}">
             <div class="row nrPtc" ">
                 <div class="col">
@@ -53,114 +53,116 @@ function carrinho() {
             </div>
             <hr class="linha">
         </div>`;
-        tudo.innerHTML += codigo;
+            tudo.innerHTML += codigo;
 
-    });
+        });
 
-    const nrParticipantes = document.querySelectorAll('.atv');
+        const nrParticipantes = document.querySelectorAll('.atv');
 
-    nrParticipantes.forEach(nr => {
-        const atv = JSON.parse(localStorage.getItem('atividades'));
-        const atv1 = atv.find(post => post.id == nr.id);
-        let campo = nr.querySelector('.participantes');
-        let nrPart = atv1.requisitos.participantes;
-        campo.value = nrPart;
+        nrParticipantes.forEach(nr => {
+            const atv = JSON.parse(localStorage.getItem('atividades'));
+            const atv1 = atv.find(post => post.id == nr.id);
+            let campo = nr.querySelector('.participantes');
+            let nrPart = atv1.requisitos.participantes;
+            campo.value = nrPart;
 
-        let preco = nr.querySelector('#preco');
-        let total = document.getElementById('precoTotal');
-        total.textContent = parseFloat(total.textContent) + (atv1.preco * atv1.requisitos.participantes);
+            let preco = nr.querySelector('#preco');
+            let total = document.getElementById('precoTotal');
+            total.textContent = parseFloat(total.textContent) + (atv1.preco * atv1.requisitos.participantes);
 
-        const horario = marcacoes.find(post => post.email === username.email).atividades.find(post => post.id === nr.id);
-        if (horario.data.data.length !== 0) {
+            const horario = marcacoes.find(post => post.email === username.email).atividades.find(post => post.id === nr.id);
+            if (horario.data.data.length !== 0) {
+                const data = nr.querySelector('#data');
+                data.value = horario.data.data;
+            }
+
+            if (horario.data.hora.length !== 0) {
+                const hora1 = nr.querySelector('.drop');
+                hora1.textContent = horario.data.hora;
+                const dropItem = nr.querySelector('.dropdown-menu');
+                dropItem.innerHTML = '';
+                const horas = Math.round(atv1.requisitos.tempo / 60);
+                for (let i = 8; i <= (20 - horas); i++) {
+                    const horarioInicial = i;
+                    const horarioFinal = i + horas;
+                    const cod = `<a class="dropdown-item">${horarioInicial}h - ${horarioFinal}h</a>`;
+                    dropItem.innerHTML += cod;
+                }
+                const dropItem1 = nr.querySelectorAll('.dropdown-item');
+                const drop = nr.querySelector('.drop');
+
+                dropItem1.forEach(obj => {
+                    obj.addEventListener('click', () => {
+                        drop.textContent = obj.textContent;
+                    });
+                });
+            }
+
+            const adicionar = nr.querySelector('.adicionar');
+            adicionar.addEventListener('click', () => {
+                let total1 = document.getElementById('precoTotal');
+                let p = campo.value;
+                p++;
+                campo.value = p;
+                let preco1 = atv1.preco * p;
+                preco.textContent = preco1.toFixed(2) + '€';
+                let total2 = parseFloat(total.textContent) + parseFloat(atv1.preco);
+                total1.innerHTML = total2.toFixed(2);
+            });
+
+            const diminuir = nr.querySelector('.diminuir');
+            diminuir.addEventListener('click', () => {
+                let total1 = document.getElementById('precoTotal');
+                let p = campo.value;
+                if (p > nrPart) {
+                    p--;
+                    campo.value = p;
+                    let preco1 = atv1.preco * p;
+                    preco.textContent = preco1.toFixed(2) + '€';
+                    let total2 = parseFloat(total.textContent) - parseFloat(atv1.preco);
+                    total1.innerHTML = total2.toFixed(2);
+                }
+
+            });
+
+            const lixo = nr.querySelector('.iconLixo');
+
+            lixo.addEventListener('click', () => {
+                const marc1 = JSON.parse(localStorage.getItem('carrinho'));
+                const usuarioIndex = marc1.findIndex(item => item.email === username.email);
+
+                if (usuarioIndex !== -1) {
+                    const usuario = marc1[usuarioIndex];
+                    usuario.atividades = usuario.atividades.filter(atividade => atividade.id !== nr.id);
+                    localStorage.setItem("carrinho", JSON.stringify(marc1));
+                    nr.remove();
+                }
+            })
+
             const data = nr.querySelector('#data');
-            data.value = horario.data.data;
-        }
 
-        if (horario.data.hora.length !== 0) {
-            const hora1 = nr.querySelector('.drop');
-            hora1.textContent = horario.data.hora;
-            const dropItem = nr.querySelector('.dropdown-menu');
-            dropItem.innerHTML = '';
-            const horas = Math.round(atv1.requisitos.tempo / 60);
-            for (let i = 8; i <= (20 - horas); i++) {
-                const horarioInicial = i;
-                const horarioFinal = i + horas;
-                const cod = `<a class="dropdown-item">${horarioInicial}h - ${horarioFinal}h</a>`;
-                dropItem.innerHTML += cod;
-            }
-            const dropItem1 = nr.querySelectorAll('.dropdown-item');
-            const drop = nr.querySelector('.drop');
+            data.addEventListener('change', () => {
+                const dropItem = nr.querySelector('.dropdown-menu');
+                const horas = Math.round(atv1.requisitos.tempo / 60);
+                dropItem.innerHTML = '';
+                for (let i = 8; i <= (20 - horas); i++) {
+                    const horarioInicial = i;
+                    const horarioFinal = i + horas;
+                    const cod = `<a class="dropdown-item">${horarioInicial}h - ${horarioFinal}h</a>`;
+                    dropItem.innerHTML += cod;
+                }
 
-            dropItem1.forEach(obj => {
-                obj.addEventListener('click', () => {
-                    drop.textContent = obj.textContent;
-                });
-            });
-        }
+                const dropItem1 = nr.querySelectorAll('.dropdown-item');
+                const drop = nr.querySelector('.drop');
 
-        const adicionar = nr.querySelector('.adicionar');
-        adicionar.addEventListener('click', () => {
-            let total1 = document.getElementById('precoTotal');
-            let p = campo.value;
-            p++;
-            campo.value = p;
-            let preco1 = atv1.preco * p;
-            preco.textContent = preco1.toFixed(2) + '€';
-            let total2 = parseFloat(total.textContent) + parseFloat(atv1.preco);
-            total1.innerHTML = total2.toFixed(2);
-        });
-
-        const diminuir = nr.querySelector('.diminuir');
-        diminuir.addEventListener('click', () => {
-            let total1 = document.getElementById('precoTotal');
-            let p = campo.value;
-            if (p > nrPart)
-                p--;
-            campo.value = p;
-            let preco1 = atv1.preco * p;
-            preco.textContent = preco1.toFixed(2) + '€';
-            let total2 = parseFloat(total.textContent) - parseFloat(atv1.preco);
-            total1.innerHTML = total2.toFixed(2);
-        });
-
-        const lixo = nr.querySelector('.iconLixo');
-
-        lixo.addEventListener('click', () => {
-            const marc1 = JSON.parse(localStorage.getItem('carrinho'));
-            const usuarioIndex = marc1.findIndex(item => item.email === username.email);
-
-            if (usuarioIndex !== -1) {
-                const usuario = marc1[usuarioIndex];
-                usuario.atividades = usuario.atividades.filter(atividade => atividade.id !== nr.id);
-                localStorage.setItem("carrinho", JSON.stringify(marc1));
-                nr.remove();
-            }
-        })
-
-        const data = nr.querySelector('#data');
-
-        data.addEventListener('change', () => {
-            const dropItem = nr.querySelector('.dropdown-menu');
-            const horas = Math.round(atv1.requisitos.tempo / 60);
-            dropItem.innerHTML = '';
-            for (let i = 8; i <= (20 - horas); i++) {
-                const horarioInicial = i;
-                const horarioFinal = i + horas;
-                const cod = `<a class="dropdown-item">${horarioInicial}h - ${horarioFinal}h</a>`;
-                dropItem.innerHTML += cod;
-            }
-
-            const dropItem1 = nr.querySelectorAll('.dropdown-item');
-            const drop = nr.querySelector('.drop');
-
-            dropItem1.forEach(obj => {
-                obj.addEventListener('click', () => {
-                    drop.textContent = obj.textContent;
+                dropItem1.forEach(obj => {
+                    obj.addEventListener('click', () => {
+                        drop.textContent = obj.textContent;
+                    });
                 });
             });
         });
-    });
-    }else{
+    } else {
         const met = document.getElementById('mets')
         const codigo = `
             <div class="text-center fullscreen d-flex justify-content-center align-items-center">

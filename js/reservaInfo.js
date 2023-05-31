@@ -71,6 +71,11 @@ function carrinho() {
 
     const total = document.getElementById('total');
     total.innerHTML = reservasFiltro.total;
+
+    const feed = document.getElementById('btnFinal');
+    if(username.role === "gestor"){
+      feed.remove();
+    }
 }
 
 carrinho();
