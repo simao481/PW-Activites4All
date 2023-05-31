@@ -54,7 +54,7 @@ const nrReservas = () => {
     const reservas = JSON.parse(localStorage.getItem('carrinho'));
     const carrinho1 = document.getElementById('carrinho1');
     const user = JSON.parse(localStorage.getItem('utilizadorLigado'));
-    if (user) {
+    if (user && user.role === "cliente") {
         carrinho1.innerHTML = `<div id="carrinho">
         <div id="contador">
             
