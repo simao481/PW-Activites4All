@@ -252,7 +252,7 @@ function createCardElement2(filteredData) {
             </p>
             <div class="row">
                 <div class="col-sm" style="padding-right:0%;">
-                    <p class="text-white texto-card-corpo" style="font-size: 95%;">Desde<br><span class="preco">${filteredData[0].preco}</span>€ / Pessoa</p>
+                    <p class="text-white texto-card-corpo" style="font-size: 95%;"><span class="preco">${filteredData[0].preco}</span>€ / Pessoa</p>
                 </div>
                 <div class="col-sm">
                     <button type="button" class="btn btn-primary comprar" id="${filteredData[0].id}">Comprar</button>
