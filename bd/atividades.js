@@ -244,11 +244,11 @@ function createCardElement2(filteredData) {
     postElement2.classList.add("card2");
     postElement2.innerHTML = `
     <div class="card card2 atividades-card justify-content-end" id ="${filteredData[0].id}"
-            style="background: url(images/${filteredData[0].imagem}.jpeg); background-size: cover;">
+            style="background: url(${filteredData[0].imagem}); background-size: cover;">
             <div class="card-corpo">
             <h3 class="text-white texto-card-titulo" style="font-size: 150%;">${filteredData[0].titulo}</h3>
             <p class="text-white texto-card-corpo" style="font-size: 110%;">
-                <i class='${filteredData[0].icon}' style='color: white'></i> ${filteredData[0].categoria} <i class="fa fa-clock-o" aria-hidden="true"></i> ${filteredData[0].tempo}
+                <i class='icon' id="${filteredData[0].categoria}" style='color: white'></i> ${filteredData[0].categoria} <i class="fa fa-clock-o" aria-hidden="true"></i> ${filteredData[0].tempo}
             </p>
             <div class="row">
                 <div class="col-sm" style="padding-right:0%;">

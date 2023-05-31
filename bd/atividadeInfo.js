@@ -23,7 +23,7 @@ if (id) {
     atividade.forEach((postData) => {
         titulo.innerHTML = postData.titulo;
         corpo.innerHTML = `<section class="hero-wrap hero-wrap-2"
-     style="background-image: url('images/${postData.imagem}.jpeg'); background-size: cover;"
+     style="background-image: url('${postData.imagembg}'); background-size: cover;"
      data-stellar-background-ratio="0.5">
      <div class="overlay"></div>
      <div class="container">
@@ -49,7 +49,6 @@ if (id) {
         dificuldade.innerHTML = postData.dificuldade;
         localizacao.innerHTML = postData.localizacao;
         cardTitulo.innerHTML = postData.titulo;
-        const primeiro = postData.pacotes[0];
         
         participantes.innerHTML = postData.requisitos.participantes;
         idadeMin.innerHTML = postData.requisitos.idadeMin;
@@ -89,6 +88,17 @@ const addCardClickListener = () => {
             }
 
         });
+
+        const icons = card.querySelectorAll('.icon');
+        icons.forEach(icon => {
+            if (icon.id === "Terra") {
+                icon.classList.add("fas", "fa-running");
+            } else if (icon.id === "Água") {
+                icon.classList.add("fas", "fa-water");
+            } else if (icon.id === "Ar") {
+                icon.classList.add("fas", "fa-wind");
+            }
+        });
     });
 
 };
@@ -99,11 +109,11 @@ function createCardElement2(filteredData) {
     postElement2.classList.add("card2");
     postElement2.innerHTML = `
     <div class="card card2 atividades-card justify-content-end" id ="${filteredData[0].id}"
-            style="background: url(images/${filteredData[0].imagem}.jpeg); background-size: cover;">
+            style="background: url(${filteredData[0].imagem}); background-size: cover;">
             <div class="card-corpo">
             <h3 class="text-white texto-card-titulo" style="font-size: 150%;">${filteredData[0].titulo}</h3>
             <p class="text-white texto-card-corpo" style="font-size: 110%;">
-                <i class='${filteredData[0].icon}' style='color: white'></i> ${filteredData[0].categoria} <i class="fa fa-clock-o" aria-hidden="true"></i> ${filteredData[0].tempo}
+                <i class='icon' id="${filteredData[0].categoria}" style='color: white'></i> ${filteredData[0].categoria} <i class="fa fa-clock-o" aria-hidden="true"></i> ${filteredData[0].tempo}
             </p>
             <div class="row">
                 <div class="col-sm" style="padding-right:0%;">

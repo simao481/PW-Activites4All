@@ -12,7 +12,7 @@ function carrinho() {
             <div class="row nrPtc" ">
                 <div class="col">
                     <h4 class="pb-10" id="nome">${atv1.titulo}</h4>
-                    <img src="images/${atv1.imagem}.jpeg" id="imagem-carrinho">
+                    <img src="${atv1.imagemc}" id="imagem-carrinho">
                 </div>
                 <div class="col-5 meio">
                     <div class="campos d-flex">
@@ -45,7 +45,7 @@ function carrinho() {
                     </div>
                 </div>
                 <div class="col-2 pt-90">
-                    <h5 id="preco">${atv1.preco * atv1.requisitos.participantes}€</h5>
+                    <h5 id="preco">${(atv1.preco * atv1.requisitos.participantes).toFixed(2)}€</h5>
                 </div>
                 <div class="col-2 pt-80">
                     <span class="iconLixo"><i class="fa-solid fa-trash"></i></span>
