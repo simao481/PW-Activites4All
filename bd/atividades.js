@@ -30,11 +30,11 @@ const createCardElement = (postData) => {
     postElement.classList.add("card1");
     postElement.innerHTML = `
     <div class="card card1 atividades-card justify-content-end" id ="${postData.id}"
-            style="background: url(images/${postData.imagem}.jpeg); background-size: cover;">
+            style="background: url(${postData.imagem}); background-size: cover;">
             <div class="card-corpo">
                 <h3 class="text-white texto-card-titulo" style="font-size: 150%;">${postData.titulo}</h3>
                 <p class="text-white texto-card-corpo" style="font-size: 110%;">
-                    <i class='${postData.icon}' style='color: white'></i> ${postData.categoria} <i class="fa fa-clock-o" aria-hidden="true"></i> ${postData.tempo}
+                    <i class="icon" id="${postData.categoria}" style='color: white'></i> ${postData.categoria} <i class="fa fa-clock-o" aria-hidden="true"></i> ${postData.tempo}
                 </p>
                 <div class="row">
                     <div class="col-sm" style="padding-right:0%;">
@@ -63,18 +63,18 @@ const nrReservas = () => {
             <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
             </svg></p>`;
         const contador = document.getElementById('contador');
-        if(reservas){
+        if (reservas) {
             const reservasFiltered = reservas.find(post => post.email === user.email);
-            if(reservasFiltered){
+            if (reservasFiltered) {
                 if (reservasFiltered.atividades.length !== 0)
                     contador.innerHTML = `<p class="text-center m-0 badge badge-pill badge-danger">${reservasFiltered.atividades.length}</p>`;
-            }else{
-                reservas.push({email: user.email, atividades:[]});
+            } else {
+                reservas.push({ email: user.email, atividades: [] });
                 localStorage.setItem('carrinho', JSON.stringify(reservas));
             }
-                
-        }else{
-            localStorage.setItem('carrinho', JSON.stringify([{email: user.email, atividades:[]}]));
+
+        } else {
+            localStorage.setItem('carrinho', JSON.stringify([{ email: user.email, atividades: [] }]));
         }
         carrinho1.addEventListener('click', () => {
             window.location.href = 'carrinho.html';
@@ -100,7 +100,7 @@ const addCardClickListener = () => {
             event.stopPropagation();
             const userLogado = JSON.parse(localStorage.getItem('utilizadorLigado'));
             if (userLogado) {
-                const reserva = { "id": cardCorpo.id, participantes: "" ,"data":{"data": "", "hora": ""} }
+                const reserva = { "id": cardCorpo.id, participantes: "", "data": { "data": "", "hora": "" } }
                 const reservas = JSON.parse(localStorage.getItem('carrinho'));
                 if (reservas) {
                     const reservasFiltered = reservas.find(post => post.email === userLogado.email);
@@ -112,13 +112,24 @@ const addCardClickListener = () => {
                         localStorage.setItem('carrinho', JSON.stringify(reservas));
                         nrReservas();
                     }
-                }else{
-                    localStorage.setItem('carrinho', JSON.stringify([{email: userLogado.email, atividades:[reserva]}]));
+                } else {
+                    localStorage.setItem('carrinho', JSON.stringify([{ email: userLogado.email, atividades: [reserva] }]));
                     nrReservas();
                 }
 
             } else {
                 window.location.href = 'login.html';
+            }
+        });
+
+        const icons = card.querySelectorAll('.icon');
+        icons.forEach(icon => {
+            if (icon.id === "Terra") {
+                icon.classList.add("fas", "fa-running");
+            } else if (icon.id === "Água") {
+                icon.classList.add("fas", "fa-water");
+            } else if (icon.id === "Ar") {
+                icon.classList.add("fas", "fa-wind");
             }
         });
     });

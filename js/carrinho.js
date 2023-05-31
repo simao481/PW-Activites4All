@@ -3,6 +3,7 @@ const marcacoes = JSON.parse(localStorage.getItem('carrinho'));
 const username = JSON.parse(localStorage.getItem('utilizadorLigado'));
 const marcacoesFiltro = marcacoes.find(post => post.email == username.email);
 function carrinho() {
+    if(marcacoesFiltro.atividades.length !== 0){
     marcacoesFiltro.atividades.forEach(element => {
         const atv = JSON.parse(localStorage.getItem('atividades'));
         const atv1 = atv.find(post => post.id == element.id)
@@ -159,6 +160,14 @@ function carrinho() {
             });
         });
     });
+    }else{
+        const met = document.getElementById('mets')
+        const codigo = `
+            <div class="text-center fullscreen d-flex justify-content-center align-items-center">
+                <h2>Ainda não adicionaste nenhuma atividade ao teu carrinho</h2>
+            </div>`;
+        met.innerHTML = codigo;
+    }
 }
 
 carrinho();
@@ -171,7 +180,6 @@ seguinte.addEventListener('click', () => {
     const carrinho = JSON.parse(localStorage.getItem('carrinho'));
     const carrinho2 = carrinho.find(post => post.email === username.email);
     const atvs = document.querySelectorAll('.atv');
-    console.log(atvs)
     atvs.forEach(atv => {
         const data = atv.querySelector('#data');
         const time = atv.querySelector('.drop');
@@ -226,6 +234,7 @@ seguinte.addEventListener('click', () => {
             </div>`;
 
         const corp = document.getElementById('mets');
+        corp.classList.add('fullscreen');
         corp.innerHTML = `
             <div class="mt-100 row" style="width: 100%;">
                 <div class="col text-center" id="mbway">
@@ -271,7 +280,6 @@ seguinte.addEventListener('click', () => {
             <p class="text-center m-0 pb-100"><a  href="index.html">Voltar ao início</a></p>`;
             const car = JSON.parse(localStorage.getItem('carrinho'));
             const car1 = car.filter(post => !(post.email === username.email));
-            console.log(car1);
             localStorage.setItem('carrinho', JSON.stringify(car1));
         });
 
