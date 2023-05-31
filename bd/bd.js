@@ -634,12 +634,16 @@ const users = [{
 localStorage.setItem('utilizadores', JSON.stringify(users));
 
 const gestores = [{
+    "id": "1",
     "user": "rita1",
     "password": "1234",
+    "funcao": "Terra"
 },
 {
+    "id": "2",
     "user": "cata2",
     "password": "1234",
+    "funcao": "Água"
 }]
 
 localStorage.setItem('gestores', JSON.stringify(gestores));
