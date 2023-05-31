@@ -37,10 +37,10 @@ const createCardElement = (postData) => {
                     <i class="icon" id="${postData.categoria}" style='color: white'></i> ${postData.categoria} <i class="fa fa-clock-o" aria-hidden="true"></i> ${postData.tempo}
                 </p>
                 <div class="row">
-                    <div class="col-sm" style="padding-right:0%;">
-                        <p class="text-white texto-card-corpo" style="font-size: 95%;">Desde<br><span class="preco">${postData.preco}</span>€ / Pessoa</p>
+                    <div class="col-md-6 pt-10" style="padding-right:0%;">
+                        <p class="text-white texto-card-corpo" style="font-size: 95%;"><span class="preco">${postData.preco}</span>€ / Pessoa</p>
                     </div>
-                    <div class="col-sm">
+                    <div class="col-md-5 mb-10 mr-10">
                         <button type="button" class="btn btn-primary comprar" id="${postData.id}">Comprar</button>
                     </div>
                 </div>

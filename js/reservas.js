@@ -1,7 +1,6 @@
 const reservas = JSON.parse(localStorage.getItem('reservas'));
 const user = JSON.parse(localStorage.getItem('utilizadorLigado'));
 const tabela = document.getElementById('tabelaReservas');
-const reservasUser = reservas.filter(post => post.email === user.email);
 
 function getStatusLabel(estado) {
   if (estado === 'Pendente') {
@@ -28,9 +27,12 @@ function renderTable() {
   const tableBody = document.getElementById('tabelaReservas');
   tableBody.innerHTML = '';
 
-  for (let i = startIndex; i < endIndex && i < reservasUser.length; i++) {
-    const element = reservasUser[i];
-    const row = `
+  if (reservas) {
+    const reservasUser = reservas.filter(post => post.email === user.email);
+    if (reservasUser.length !== 0) {
+      for (let i = startIndex; i < endIndex && i < reservasUser.length; i++) {
+        const element = reservasUser[i];
+        const row = `
       <tr class="text-gray-700 linhaRes dark:text-gray-400 linhaReserva" id="${element.id}">
         <td class="px-4 py-3">
           <div class="flex items-center text-sm">
@@ -48,41 +50,64 @@ function renderTable() {
         </td>
       </tr>
     `;
-    tableBody.innerHTML += row;
-  }
-  const linhasReservas = document.querySelectorAll('.linhaRes');
+        tableBody.innerHTML += row;
+      }
+      const linhasReservas = document.querySelectorAll('.linhaRes');
 
-  linhasReservas.forEach(linha =>{
-      linha.addEventListener('click', () =>{
+      linhasReservas.forEach(linha => {
+        linha.addEventListener('click', () => {
           localStorage.setItem('reservaSelecionada', linha.id);
           window.location.href = 'reservaInfo.html';
+        });
       });
-  });
 
-}
+      const linhas = document.querySelectorAll('.linhaReserva');
 
-const linhas = document.querySelectorAll('.linhaReserva');
-
-linhas.forEach(linha => {
-  const reserva = reservasUser.find(post => post.id === linha.id);
-  const status = linha.querySelector('#estado');
-  if (reserva.estado === 'Pendente') {
-    status.innerHTML = `
+      linhas.forEach(linha => {
+        const reserva = reservasUser.find(post => post.id === linha.id);
+        const status = linha.querySelector('#estado');
+        if (reserva.estado === 'Pendente') {
+          status.innerHTML = `
       <span class="px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-full dark:text-white dark:bg-orange-600">
         Pendente
       </span>`;
-  } else if (reserva.estado === 'Aceite') {
-    status.innerHTML = `
+        } else if (reserva.estado === 'Aceite') {
+          status.innerHTML = `
       <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
         Aceite
       </span>`;
-  } else if (reserva.estado === 'Recusado') {
-    status.innerHTML = `
+        } else if (reserva.estado === 'Recusado') {
+          status.innerHTML = `
       <span class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700">
         Recusado
       </span>`;
+        }
+      });
+
+      const linhasReservas1 = document.querySelectorAll('.linhaRes');
+
+      linhasReservas1.forEach(linha => {
+        linha.addEventListener('click', () => {
+          localStorage.setItem('reservaSelecionada', linha.id);
+          window.location.href = 'reservaInfo.html';
+        });
+      });
+
+    } else {
+      tableBody.innerHTML += `
+      <tr class="text-gray-700 dark:text-gray-400 linhaReserva">
+        <td class="px-4 py-3">
+          <p>Ainda não possui nenhuma reserva feita!</p>
+        </td>`;
+    }
+  } else {
+    tableBody.innerHTML += `
+      <tr class="text-gray-700 dark:text-gray-400 linhaReserva">
+        <td class="px-4 py-3">
+          <p>Ainda não possui nenhuma reserva feita!</p>
+        </td>`;
   }
-});
+}
 
 let currentPage = 1;
 const itemsPerPage = 5;
@@ -94,40 +119,37 @@ function goToPage(page) {
 }
 
 function setupPagination() {
-  const totalPages = Math.ceil(reservasUser.length / itemsPerPage);
-  const paginationContainer = document.querySelector('.pagination');
+  if (reservas) {
+    const reservasUser = reservas.filter(post => post.email === user.email);
+    const totalPages = Math.ceil(reservasUser.length / itemsPerPage);
+    const paginationContainer = document.querySelector('.pagination');
 
-  paginationContainer.innerHTML = '';
+    paginationContainer.innerHTML = '';
 
-  for (let page = 1; page <= totalPages; page++) {
-    const paginationItem = document.createElement('li');
-    const paginationLink = document.createElement('button');
+    for (let page = 1; page <= totalPages; page++) {
+      const paginationItem = document.createElement('li');
+      const paginationLink = document.createElement('button');
 
-    paginationLink.innerText = page;
-    paginationLink.classList.add('px-3', 'py-1', 'rounded-md', 'focus:outline-none', 'focus:shadow-outline-green');
-    if (page === currentPage) {
-      paginationLink.classList.add('text-white', 'bg-green-6001', 'border', 'border-r-0', 'border-green-600', 'rounded-md',);
-    } else {
-      paginationLink.classList.add('text-gray-700');
+      paginationLink.innerText = page;
+      paginationLink.classList.add('px-3', 'py-1', 'rounded-md', 'focus:outline-none', 'focus:shadow-outline-green');
+      if (page === currentPage) {
+        paginationLink.classList.add('text-white', 'bg-green-6001', 'border', 'border-r-0', 'border-green-600', 'rounded-md',);
+      } else {
+        paginationLink.classList.add('text-gray-700');
+      }
+
+      paginationLink.addEventListener('click', () => {
+        goToPage(page);
+      });
+
+      paginationItem.appendChild(paginationLink);
+      paginationContainer.appendChild(paginationItem);
     }
+  }else{
 
-    paginationLink.addEventListener('click', () => {
-      goToPage(page);
-    });
-
-    paginationItem.appendChild(paginationLink);
-    paginationContainer.appendChild(paginationItem);
   }
 }
 
 renderTable();
 setupPagination();
 
-const linhasReservas = document.querySelectorAll('.linhaRes');
-
-linhasReservas.forEach(linha =>{
-    linha.addEventListener('click', () =>{
-        localStorage.setItem('reservaSelecionada', linha.id);
-        window.location.href = 'reservaInfo.html';
-    });
-});

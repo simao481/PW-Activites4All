@@ -16,7 +16,7 @@ function carrinho() {
               <h2 class="text-center my-3 text-2xl font-semibold text-gray-700 dark:text-gray-200" id="nome">
                 ${atv1.titulo}
               </h2>
-              <img src="images/${atv1.imagem}.jpeg" id="imagem-carrinho">
+              <img src="${atv1.imagemc}" id="imagem-carrinho">
             </div>
             <div class="col-5 meio mt-100">
               <div class="campos d-flex">
